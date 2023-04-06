@@ -85,20 +85,23 @@
 <body>
     <div class="chatgptMain">
         <div class="filter-menu text-center mb-40">
-            <h4>向Ta提问：</h4>
+            <h4>向Ta提问(使用OpenAI API)</h4>
         </div>
     
-        <textarea class="form-control" id="chat-gpt-input" placeholder="输入描述" rows="3" resize="none"
-            style="width: 100%; margin: 0 auto; background-color: #f4f4f4; color: #333; padding: 10px 0px 0 0px; outline-color: #f4f4f4; border: 1px solid #ccc; border-radius: 12px;"></textarea>
+        <textarea class="form-control" id="chat-gpt-input" placeholder="输入描述" rows="4" resize="none"
+            style="width: 90%; margin: 0 auto; background-color: #f4f4f4; color: #333; padding: 10px 10px 10 10px; outline-color: #f4f4f4; border: 1px solid #ccc; border-radius: 0px;roll;"></textarea>
+			<br>
         <button onClick="callCHATGPT()" autocomplete="off" class="btn btn-large" href="#"
-            style="background-color: #333; color: #f4f4f4; border-radius: 10px">
+            style="background-color: #8dbcf4; color: #46f4df4; border-radius: 2px">
         <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>提交问题
         </button>
+		<br>
         <textarea class="form-control" id="chatgpt-response"
-            placeholder="Loading" rows="26" resize="none"
-            style="width: 100%;height: auto; margin: 0 auto; padding: 10px 0px 0 0px; background-color: #f4f4f4; color: #333; outline-color: #f4f4f4; border: 1px solid #ccc; border-radius: 10px; overflow: scroll;"
+            placeholder="Loading" rows="20" resize="none"
+            style="width: 90%;height: auto; margin: 0 auto; padding: 10px 10px 0 0px; background-color: #f4f4f4; color: #333; outline-color: #f4f4f4; border: 1px solid #ccc; border-radius: 0px; overflow: scroll;"
             readonly="true"></textarea>
     </div>
+	<br>
 </body>
  
 </html>
