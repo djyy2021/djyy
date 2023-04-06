@@ -1,1 +1,104 @@
-������...
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Ai - Chat</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .chatgptMain{
+            padding: 0 20px;
+        }
+        #chatgpt-response {
+            font-family: "宋体";
+            font-size: 20px;
+            color: #0000FF;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        async function callCHATGPT() {
+            var responseText1 = document.getElementById("chatgpt-response");
+            responseText1.innerHTML = ""
+ 
+            function printMessage(message) {
+               var responseText = document.getElementById("chatgpt-response");
+               var index = 0;
+ 
+               // 创建一个定时器，每隔一段时间打印一个字符
+               var interval = setInterval(function() {
+                    responseText.innerHTML += message[index];
+                    index++;
+ 
+                    // 当打印完成时，清除定时器
+                    if (index >= message.length) {
+                        clearInterval(interval);
+                    }
+                  },
+                150); // 每隔50毫秒打印一个字符
+            }
+            var xhr = new XMLHttpRequest();
+            var url = "https://api.openai.com/v1/completions";
+            xhr.open("POST", url, true);
+            xhr.setRequestHeader("Content-Type", "application/json");
+            xhr.setRequestHeader("Authorization", "Bearer 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");
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                  var json = JSON.parse(xhr.responseText);
+                  var response = json.choices[0].text;
+ 
+                // 将CHATGPT的返回值输出到文本框
+                var responseText = document.getElementById("chatgpt-response");
+                var index = 0;
+ 
+                // 创建一个定时器，每隔一段时间打印一个字符
+                var interval = setInterval(function() {
+                        responseText.innerHTML += response[index];
+                        index++;
+ 
+                        // 当打印完成时，清除定时器
+                        if (index >= response.length) {
+                           clearInterval(interval);
+                        }
+                    },
+                    50); // 每隔50毫秒打印一个字符
+               }
+            };
+ 
+            var data = JSON.stringify({
+               "prompt": document.getElementById("chat-gpt-input").value,
+               "max_tokens": 2048,
+               "temperature": 0.5,
+               "top_p": 1,
+               "frequency_penalty": 0,
+               "presence_penalty": 0,
+               "model": "text-davinci-003"
+            });
+            console.log(data);
+            await printMessage('正在思考，请等待......');
+            await xhr.send(data);
+         }
+    </script>
+</head>
+ 
+<body>
+    <div class="chatgptMain">
+        <div class="filter-menu text-center mb-40">
+            <h4>向Ta提问：</h4>
+        </div>
+    
+        <textarea class="form-control" id="chat-gpt-input" placeholder="输入描述" rows="3" resize="none"
+            style="width: 100%; margin: 0 auto; background-color: #f4f4f4; color: #333; padding: 10px 0px 0 0px; outline-color: #f4f4f4; border: 1px solid #ccc; border-radius: 12px;"></textarea>
+        <button onClick="callCHATGPT()" autocomplete="off" class="btn btn-large" href="#"
+            style="background-color: #333; color: #f4f4f4; border-radius: 10px">
+        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>提交问题
+        </button>
+        <textarea class="form-control" id="chatgpt-response"
+            placeholder="Loading" rows="26" resize="none"
+            style="width: 100%;height: auto; margin: 0 auto; padding: 10px 0px 0 0px; background-color: #f4f4f4; color: #333; outline-color: #f4f4f4; border: 1px solid #ccc; border-radius: 10px; overflow: scroll;"
+            readonly="true"></textarea>
+    </div>
+</body>
+ 
+</html>
