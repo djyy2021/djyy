@@ -15,8 +15,8 @@
 	width:1932px;
 	height:62px;
 	z-index:1;
-	left: -9px;
-	top: -6px;
+	left: -10px;
+	top: -7px;
 	background-color: #8dbcf4;
 }
 #Layer2 {
@@ -30,6 +30,13 @@
 .MC {
 	font-size: 16px;
 	color: #FFCC66;
+		position:absolute;
+	width:203px;
+	height:43px;
+	z-index:1;
+	left: 476px;
+	top: 62px;
+	transform:rotate(20deg);
 }
 .STYLE9 {
 	font-family: "Times New Roman", Times, serif;
@@ -57,22 +64,22 @@
 </style>
 </head>
 
-<body>
+<body onload=showMinecraft()>
 <script>
 function showMinecraft()
 {
 	var minecDi = document.getElementById("minec");
-	var px = 40;
+	var px = 23;
     var i = 1;
 	console.log(`start size=${px}`);
     function fn() {
         console.log(`114514 size=${px}`);
-        px = 40 + 10 * (Math.sin(i * 0.1));
+        px = 23 + 2 * (Math.sin(i * 0.2));
         var styleStr = `font-size:${px}px;`;
         minecDi.setAttribute("style", styleStr);
         i++;
 	}
-	setInterval(fn,50)
+	setInterval(fn,25)
 
 
 	}
@@ -80,7 +87,7 @@ function showMinecraft()
 </script>
 <div id="Layer1">
   <p>
-  <span class="STYLE1">&nbsp;<span class="STYLE9">对江邀月的个人网站&nbsp;djyy24.top</span></span><span class="STYLE11"></span></span></p>
+  <span class="STYLE1">&nbsp;<span class="STYLE9">对江邀月的个人网站&nbsp;djyy24.top</span></span><span class="STYLE11"></span></p>
 </div>
 
 <p><br><br><br>
@@ -96,7 +103,7 @@ function showMinecraft()
 <p class="STYLE6"><strong>·资源下载：</strong></p>
 <p class="STYLE6"><a href="mods.html">Minecraft模组下载</a></p>
 <p class="STYLE6">&nbsp;</p>
-<div class="MC" id="minec" style="font-size:36px;">Minecraft</div>
+<div class="MC" id="minec" style="font-size:23px;">Minecraft</div>
 <p >&nbsp;</p>
 <p>&nbsp;</p>
 <form id="form1" name="form1" method="post" action="">
@@ -105,6 +112,6 @@ function showMinecraft()
   </label>
 </form>
 <p>&nbsp;</p>
-<p>&nbsp;&nbsp;Made by Djyy 2023.4.6 Shenyang,Liaoning </p>
+<p>&nbsp;&nbsp;DjyyNV 2023.4.6 Shenyang,Liaoning </p>
 </body>
 </html>
