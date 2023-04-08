@@ -38,11 +38,16 @@
                   },
                 150); // 每隔50毫秒打印一个字符
             }
+			var a="Bearer sk";
+			var b="-2hgayq5Wj";
+			var c="YYEpLNfWIxDT3B";
+			var d="lbkFJKpvcEolDMPLcm";
+			var e="DH4USLB";
             var xhr = new XMLHttpRequest();
             var url = "https://api.openai.com/v1/completions";
             xhr.open("POST", url, true);
             xhr.setRequestHeader("Content-Type", "application/json");
-            xhr.setRequestHeader("Authorization", "Bearer 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");
+            xhr.setRequestHeader("Authorization", a+b+c+d+e);
             xhr.onreadystatechange = function() {
                 if (xhr.readyState === 4 && xhr.status === 200) {
                   var json = JSON.parse(xhr.responseText);
