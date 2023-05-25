@@ -20,6 +20,7 @@
 		width:750px;
 		height: 475px;
 		background:#8dbcf4 ;
+		visibility: hidden;
 	}
 	.cssWindBG
 	{
@@ -28,6 +29,7 @@
 		height: 100%;
 		background:rgba(0,0,0,0.4) ;
 		z-index: 14;
+		visibility: hidden;
 	}
 	.cssWinImgDiv
 	{
@@ -47,7 +49,7 @@
 		z-index=16;
 		width:330px;
 		height:255px;
-		background:#ffffff ;
+		background:#8dbcf4 ;
 	}
 	.cssWinTitleDiv
 	{
@@ -57,7 +59,10 @@
 		z-index=16;
 		width:330px;
 		height:50px;
-		background:#8dbcf0 ;
+		background:#8dbcf4 ;
+		font-family: '宋体';
+		font-size: 30px;
+		font-weight:bold;
 	}
 	.cssWinClose
 	{
@@ -67,7 +72,7 @@
 		z-index=16;
 		width:140px;
 		height:35px;
-		background:#7dbcf4 ;
+		background:#002FA7 ;
 		
 	}
 	.cssWinClose_2
@@ -78,7 +83,7 @@
 		z-index=17;
 		width:140px;
 		height:25px;
-		color: aliceblue;
+		color:aliceblue;
 		
 	}
 	.cssSwapButton
@@ -89,7 +94,7 @@
 		z-index=16;
 		width:60px;
 		height:35px;
-		background:#114514 ;
+		background:#002FA7 ;
 		
 	}
 	.cssSwapButton_2
@@ -100,7 +105,7 @@
 		z-index=16;
 		width:60px;
 		height:35px;
-		background:#114514 ;
+		background:#002FA7 ;
 		
 	}
 	.cssBG
@@ -117,6 +122,13 @@
 		top:40px;
 		z-index:2;
 	}
+	.cssAuth
+	{
+		position:absolute;
+		left:1200px;
+		bottom:37px;
+		z-index:2;
+	}
 	</style>
 </head>
 
@@ -127,8 +139,7 @@
 		{
 			var imgDiv=document.getElementById("ImageDiv");
 			imgDiv.innerHTML="<img src=\"images/photo/"+LocID+"/"+UD+".jpg\" width=\"300\" height=\"400\"/>";
-		}
-							 
+		}	 
 		function showWind(title,text,Locid,imgNum)
 		{
 			Loc=0;
@@ -140,7 +151,6 @@
 			infoDiv.innerHTML=text;
 			titleDiv.innerHTML=title;
 			change(Loc,Locid);
-			
 			wind.style.visibility="visible";
 			windBG.style.visibility="visible";
 		}
@@ -157,7 +167,7 @@
 	
 	<div id="main" class="cssBG"> 
 		<div id="winBG" class="cssWindBG" onclick="closeWind()"></div>
-		<div id="infoWind" class="cssWind" >
+	  <div id="infoWind" class="cssWind" >
 		  <div id="left_button" class="cssSwapButton" onclick="Loc=(Loc+3)%4;change(Loc,'7_she');"><div class="cssWinClose_2">&nbsp;上一张</div>
 		  </div>
 		  <div id="right_button" class="cssSwapButton_2" onClick="Loc=(Loc+1)%4;change(Loc,'7_she');"><div class="cssWinClose_2">&nbsp;下一张</div>
@@ -166,11 +176,13 @@
 			<div id="ImageDiv" class="cssWinImgDiv">显示图片</div>
 			<div id="InfoDiv" class="cssWinInfDiv">显示文字</div>
 			<div id="TitleDiv" class="cssWinTitleDiv">显示标题</div>
-		
 	</div>
-		
 	  <img src="mapBG.png" width="1200" height="680"/>
-  		<div class="cssICON" onclick="showWind('地点名称','地点介绍文字介绍详细信息等地点介绍文字介绍','7_she',1)"><img src="images/icon/7_she.png" height="20"/></div>
+  		<div class="cssICON" onclick="showWind('七舍学生宿舍','七舍学生宿舍位于辽宁大学崇山校区西北角，男寝，本科生宿舍。基本配置：六人寝上床下桌,配备有阳台，无独立卫浴。','7_she',1)"><img src="images/icon/7_she.png" height="20"/></div>
+	<div class="cssAuth">
+	  <p> Minecraft相思故 制作</p>
+	  <p>邮箱：3180235660@qq.com&nbsp;</p>
 	</div>
+</div>
 </body>
 </html>
