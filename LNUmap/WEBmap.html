@@ -115,17 +115,38 @@
 		padding:0px;
 		z-index: 1;
 	}
-	.cssICON
+	.cssICON_7_she
 	{
-		position:absolute;
-		left:160px;
-		top:40px;
-		z-index:2;
+    position: absolute;
+    left: 162px;
+    top: 28px;
+    z-index: 2;
+	}
+	.cssICON_6_she
+	{
+    position: absolute;
+    left: 306px;
+    top: 27px;
+    z-index: 2;
+	}
+	.cssICON_hui_xing
+	{
+    position: absolute;
+    left: 720px;
+    top: 461px;
+    z-index: 2;
+	}
+	.cssICON_dong_pei_lou
+	{
+    position: absolute;
+    left: 837px;
+    top: 462px;
+    z-index: 3;
 	}
 	.cssAuth
 	{
 		position:absolute;
-		left:1200px;
+		left:1250px;
 		bottom:37px;
 		z-index:2;
 	}
@@ -135,14 +156,19 @@
 <body>
 	<script>
 		var Loc=0;
+		var imgNum=0;
+		var LocID="";
 		function change(UD,LocID)
 		{
 			var imgDiv=document.getElementById("ImageDiv");
 			imgDiv.innerHTML="<img src=\"images/photo/"+LocID+"/"+UD+".jpg\" width=\"300\" height=\"400\"/>";
 		}	 
-		function showWind(title,text,Locid,imgNum)
+		function showWind(title,text,Locid,iN)
 		{
+			imgNum=0;
 			Loc=0;
+			imgNum=iN;
+			LocID=Locid;
 			var imgDiv=document.getElementById("ImageDiv");
 			var windBG=document.getElementById("winBG");
 			var wind=document.getElementById("infoWind");
@@ -157,6 +183,8 @@
 		function closeWind()
 		{
 			loc=0;
+			imgNum=0;
+			LocID="";
 			var wind=document.getElementById("infoWind");
 			var windBG=document.getElementById("winBG");
 			wind.style.visibility="hidden";
@@ -167,18 +195,26 @@
 	
 	<div id="main" class="cssBG"> 
 		<div id="winBG" class="cssWindBG" onclick="closeWind()"></div>
-	  <div id="infoWind" class="cssWind" >
-		  <div id="left_button" class="cssSwapButton" onclick="Loc=(Loc+3)%4;change(Loc,'7_she');"><div class="cssWinClose_2">&nbsp;上一张</div>
+<div id="infoWind" class="cssWind" >
+		  <div id="left_button" class="cssSwapButton" onclick="Loc=(Loc+imgNum-1)%imgNum;change(Loc,LocID);"><div class="cssWinClose_2">&nbsp;上一张</div>
 		  </div>
-		  <div id="right_button" class="cssSwapButton_2" onClick="Loc=(Loc+1)%4;change(Loc,'7_she');"><div class="cssWinClose_2">&nbsp;下一张</div>
+		  <div id="right_button" class="cssSwapButton_2" onClick="Loc=(Loc+1)%imgNum;change(Loc,LocID);"><div class="cssWinClose_2">&nbsp;下一张</div>
 		  </div>
 		  <div id="closeWind" class="cssWinClose" onclick="closeWind()"><div class="cssWinClose_2">&nbsp; &nbsp; &nbsp; &nbsp;关 &nbsp; &nbsp; &nbsp; &nbsp; 闭&nbsp; &nbsp; &nbsp;</div></div>
 			<div id="ImageDiv" class="cssWinImgDiv">显示图片</div>
 			<div id="InfoDiv" class="cssWinInfDiv">显示文字</div>
 			<div id="TitleDiv" class="cssWinTitleDiv">显示标题</div>
 	</div>
-	  <img src="mapBG.png" width="1200" height="680"/>
-  		<div class="cssICON" onclick="showWind('七舍学生宿舍','七舍学生宿舍位于辽宁大学崇山校区西北角，男寝，本科生宿舍。基本配置：六人寝上床下桌,配备有阳台，无独立卫浴。','7_she',1)"><img src="images/icon/7_she.png" height="20"/></div>
+<img src="mapBG.png" width="1200"/>
+		
+		
+	  <div class="cssICON_7_she" onclick="LocID='7_she';imgNum=4;showWind('七舍学生宿舍','七舍学生宿舍位于辽宁大学崇山校区西北角，男寝，本科生宿舍。基本配置：六人寝上床下桌,配备有阳台，无独立卫浴。','7_she',4)"><img src="images/icon/7_she.png" width="130" height="25" /></div>
+	  <div class="cssICON_6_she" onclick="LocID='6_she';imgNum=3;showWind('六舍学生宿舍','六舍学生宿舍位于辽宁大学崇山校区西北部，男寝，本科生宿舍。基本配置：六人寝上床下桌,配备有阳台，无独立卫浴。','6_she',3)"><img src="images/icon/6_she.png" width="134" height="26" /></div>
+	  <div class="cssICON_hui_xing" onclick="LocID='hui_xing_lou';imgNum=3;showWind('蕙星楼','蕙星楼位于辽宁大学正南部，是一栋白色10层教学楼，为老校区最大的教学楼。楼内有教室，一楼有化学实验室，听力教室位于九楼。楼内配有两部电梯，楼后的小门周末不开放。\n蕙星楼开放时间：6：00--21：30','hui_xing_lou',3)"><img src="images/icon/hui_xing_lou.png" width="150"  /></div>
+	  <div class="cssICON_dong_pei_lou" onclick="LocID='dong_pei_lou';imgNum=2;showWind('东配楼','阶梯教室楼','dong_pei_lou',2)"><img src="images/icon/dong_pei_lou.png" width="33.5"  /></div>
+		
+		
+		
 	<div class="cssAuth">
 	  <p> Minecraft相思故 制作</p>
 	  <p>邮箱：3180235660@qq.com&nbsp;</p>
