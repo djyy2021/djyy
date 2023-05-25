@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>WEB地图</title>
+<style typr="text/css">
+	.father
+	{
+		position: relative;
+		width: 1200px;
+		height: 680px;
+		padding:0px;
+	}
+	.cssWind
+	{
+		position: absolute;
+		left:260px;
+		top:120px;
+		z-index:15;
+		width:750px;
+		height: 475px;
+		background:#8dbcf4 ;
+	}
+	.cssWindBG
+	{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background:rgba(0,0,0,0.4) ;
+		z-index: 14;
+	}
+	.cssWinImgDiv
+	{
+		position:absolute;
+		left:35px;
+		top:35px;
+		z-index=16;
+		width:300px;
+		height:400px;
+		background:#ffffff ;
+	}
+	.cssWinInfDiv
+	{
+		position:absolute;
+		left:380px;
+		top:110px;
+		z-index=16;
+		width:330px;
+		height:255px;
+		background:#ffffff ;
+	}
+	.cssWinTitleDiv
+	{
+		position:absolute;
+		left:380px;
+		top:35px;
+		z-index=16;
+		width:330px;
+		height:50px;
+		background:#ffffff ;
+	}
+	.cssWinClose
+	{
+		position:absolute;
+		left:570px;
+		top:400px;
+		z-index=16;
+		width:140px;
+		height:35px;
+		background:#114514 ;
+		
+	}
+	.cssWinClose_2
+	{
+		position:absolute;
+		left:0px;
+		top:6px;
+		z-index=17;
+		width:140px;
+		height:25px;
+		color: aliceblue;
+		
+	}
+	.cssSwapButton
+	{
+		position:absolute;
+		left:380px;
+		top:400px;
+		z-index=16;
+		width:60px;
+		height:35px;
+		background:#114514 ;
+		
+	}
+	.cssSwapButton_2
+	{
+		position:absolute;
+		left:450px;
+		top:400px;
+		z-index=16;
+		width:60px;
+		height:35px;
+		background:#114514 ;
+		
+	}
+	.cssBG
+	{
+		left:0px;
+		top:0px;
+		padding:0px;
+		z-index: 1;
+	}
+	.cssICON
+	{
+		position:absolute;
+		left:160px;
+		top:40px;
+		z-index:2;
+	}
+	</style>
+</head>
+
+<body>
+	<script>
+		function showWind(title,text,Locid,imgNum)
+		{
+			var imgTag="<img src=\"images/photo/"+Locid+"/1.jpg\" width=\"300\" height=\"400\"/>";
+			var windBG=document.getElementById("winBG");
+			var wind=document.getElementById("infoWind");
+			var imgDiv=document.getElementById("ImageDiv");
+			var infoDiv=document.getElementById("InfoDiv");
+			var titleDiv=document.getElementById("TitleDiv");
+			imgDiv.innerHTML=imgTag;
+			infoDiv.innerHTML=text;
+			titleDiv.innerHTML=title;
+			wind.style.visibility="visible";
+			windBG.style.visibility="visible";
+		}
+		function closeWind()
+		{
+			var wind=document.getElementById("infoWind");
+			var windBG=document.getElementById("winBG");
+			wind.style.visibility="hidden"
+			winBG.style.visibility="hidden"
+		}
+	</script>
+	
+	
+	<div id="main" class="cssBG"> 
+		<div id="winBG" class="cssWindBG" onclick="closeWind()"></div>
+		<div id="infoWind" class="cssWind" >
+		  <div id="left_button" class="cssSwapButton"><div class="cssWinClose_2">&nbsp;上一张</div>
+		  </div>
+		  <div id="right_button" class="cssSwapButton_2"><div class="cssWinClose_2">&nbsp;下一张</div>
+		  </div>
+		  <div id="closeWind" class="cssWinClose" onclick="closeWind()"><div class="cssWinClose_2">&nbsp; &nbsp; &nbsp; &nbsp;关 &nbsp; &nbsp; &nbsp; &nbsp; 闭&nbsp; &nbsp; &nbsp;</div></div>
+			<div id="ImageDiv" class="cssWinImgDiv">显示图片</div>
+			<div id="InfoDiv" class="cssWinInfDiv">显示文字</div>
+			<div id="TitleDiv" class="cssWinTitleDiv">显示标题</div>
+		
+	</div>
+		
+	  <img src="mapBG.png" width="1200" height="680"/>
+  		<div class="cssICON" onclick="showWind('地点名称','地点介绍文字介绍详细信息等地点介绍文字介绍','7_she',1)"><img src="images/icon/7_she.png" height="20"/></div>
+	</div>
+</body>
+</html>
