@@ -24,7 +24,7 @@
 	.cssWindBG
 	{
 		position: absolute;
-		width: 100%;
+		width: 150%;
 		height: 100%;
 		background:rgba(0,0,0,0.4) ;
 		z-index: 14;
@@ -57,7 +57,7 @@
 		z-index=16;
 		width:330px;
 		height:50px;
-		background:#ffffff ;
+		background:#8dbcf0 ;
 	}
 	.cssWinClose
 	{
@@ -67,7 +67,7 @@
 		z-index=16;
 		width:140px;
 		height:35px;
-		background:#114514 ;
+		background:#7dbcf4 ;
 		
 	}
 	.cssWinClose_2
@@ -122,26 +122,35 @@
 
 <body>
 	<script>
+		var Loc=0;
+		function change(UD,LocID)
+		{
+			var imgDiv=document.getElementById("ImageDiv");
+			imgDiv.innerHTML="<img src=\"images/photo/"+LocID+"/"+UD+".jpg\" width=\"300\" height=\"400\"/>";
+		}
+							 
 		function showWind(title,text,Locid,imgNum)
 		{
-			var imgTag="<img src=\"images/photo/"+Locid+"/1.jpg\" width=\"300\" height=\"400\"/>";
+			Loc=0;
+			var imgDiv=document.getElementById("ImageDiv");
 			var windBG=document.getElementById("winBG");
 			var wind=document.getElementById("infoWind");
-			var imgDiv=document.getElementById("ImageDiv");
 			var infoDiv=document.getElementById("InfoDiv");
 			var titleDiv=document.getElementById("TitleDiv");
-			imgDiv.innerHTML=imgTag;
 			infoDiv.innerHTML=text;
 			titleDiv.innerHTML=title;
+			change(Loc,Locid);
+			
 			wind.style.visibility="visible";
 			windBG.style.visibility="visible";
 		}
 		function closeWind()
 		{
+			loc=0;
 			var wind=document.getElementById("infoWind");
 			var windBG=document.getElementById("winBG");
-			wind.style.visibility="hidden"
-			winBG.style.visibility="hidden"
+			wind.style.visibility="hidden";
+			winBG.style.visibility="hidden";
 		}
 	</script>
 	
@@ -149,9 +158,9 @@
 	<div id="main" class="cssBG"> 
 		<div id="winBG" class="cssWindBG" onclick="closeWind()"></div>
 		<div id="infoWind" class="cssWind" >
-		  <div id="left_button" class="cssSwapButton"><div class="cssWinClose_2">&nbsp;上一张</div>
+		  <div id="left_button" class="cssSwapButton" onclick="Loc=(Loc+3)%4;change(Loc,'7_she');"><div class="cssWinClose_2">&nbsp;上一张</div>
 		  </div>
-		  <div id="right_button" class="cssSwapButton_2"><div class="cssWinClose_2">&nbsp;下一张</div>
+		  <div id="right_button" class="cssSwapButton_2" onClick="Loc=(Loc+1)%4;change(Loc,'7_she');"><div class="cssWinClose_2">&nbsp;下一张</div>
 		  </div>
 		  <div id="closeWind" class="cssWinClose" onclick="closeWind()"><div class="cssWinClose_2">&nbsp; &nbsp; &nbsp; &nbsp;关 &nbsp; &nbsp; &nbsp; &nbsp; 闭&nbsp; &nbsp; &nbsp;</div></div>
 			<div id="ImageDiv" class="cssWinImgDiv">显示图片</div>
