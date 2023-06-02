@@ -14,12 +14,11 @@
 	.cssWind
 	{
 		position: absolute;
-		left:260px;
+		left:360px;
 		top:120px;
 		z-index:15;
 		width:750px;
 		height: 475px;
-		background:#8dbcf4 ;
 		visibility: hidden;
 	}
 	.cssWindBG
@@ -41,6 +40,16 @@
 		height:400px;
 		background:#ffffff ;
 	}
+	.cssWinImgDivBG
+	{
+		position:absolute;
+		left:31px;
+		top:31px;
+		z-index=15;
+		width:308px;
+		height:408px;
+		background:#ffffff ;
+	}
 	.cssWinInfDiv
 	{
 		position:absolute;
@@ -49,7 +58,6 @@
 		z-index=16;
 		width:330px;
 		height:255px;
-		background:#8dbcf4 ;
 	}
 	.cssWinTitleDiv
 	{
@@ -59,7 +67,6 @@
 		z-index=16;
 		width:330px;
 		height:50px;
-		background:#8dbcf4 ;
 		font-family: '宋体';
 		font-size: 30px;
 		font-weight:bold;
@@ -72,7 +79,7 @@
 		z-index=16;
 		width:140px;
 		height:35px;
-		background:#002FA7 ;
+		background:rgba(236,195,52) ;
 		
 	}
 	.cssWinClose_2
@@ -94,7 +101,7 @@
 		z-index=16;
 		width:60px;
 		height:35px;
-		background:#002FA7 ;
+		background:rgba(236,195,52) ;
 		
 	}
 	.cssSwapButton_2
@@ -105,7 +112,7 @@
 		z-index=16;
 		width:60px;
 		height:35px;
-		background:#002FA7 ;
+		background:rgba(236,195,52) ;
 		
 	}
 	.cssBG
@@ -230,12 +237,13 @@
 	
 	<div id="main" class="cssBG"> 
 		<div id="winBG" class="cssWindBG" onclick="closeWind()"></div>
-<div id="infoWind" class="cssWind" >
+<div id="infoWind" class="cssWind" ><img src="images/wind.png" width="840">
 		  <div id="left_button" class="cssSwapButton" onclick="Loc=(Loc+imgNum-1)%imgNum;change(Loc,LocID);"><div class="cssWinClose_2">&nbsp;上一张</div>
 		  </div>
 		  <div id="right_button" class="cssSwapButton_2" onClick="Loc=(Loc+1)%imgNum;change(Loc,LocID);"><div class="cssWinClose_2">&nbsp;下一张</div>
 		  </div>
 		  <div id="closeWind" class="cssWinClose" onclick="closeWind()"><div class="cssWinClose_2">&nbsp; &nbsp; &nbsp; &nbsp;关 &nbsp; &nbsp; &nbsp; &nbsp; 闭&nbsp; &nbsp; &nbsp;</div></div>
+			<div id="ImageDivBG" class="cssWinImgDivBG"></div>
 			<div id="ImageDiv" class="cssWinImgDiv">显示图片</div>
 			<div id="InfoDiv" class="cssWinInfDiv">显示文字</div>
 			<div id="TitleDiv" class="cssWinTitleDiv">显示标题</div>
@@ -252,12 +260,12 @@
 	  <div class="cssICON_dong_pei_lou" onclick="LocID='dong_pei_lou';imgNum=2;showWind('东配楼','阶梯教室楼','dong_pei_lou',2)"><img src="images/icon/dong_pei_lou.png" width="33.5"  /></div>
 	  <div class="cssICON_tao_li_yuan" onclick="LocID='tao_li_yuan_shi_tang';imgNum=4;showWind('桃李园食堂','崇山校区最大的食堂，共有三层。','tao_li_yuan_shi_tang',2)"><img src="images/icon/tao_li_yuan_shi_tang.png" width="64"  /></div>
 	  <div class="cssICON_2_she" onclick="LocID='2_she';imgNum=4;showWind('学生宿舍二舍','学生宿舍二舍为女寝，宿舍楼于2000年竣工，共七层，宿舍配备有阳台。','2_she',3)"><img src="images/icon/2_she.png" width="55"  /></div>
-	  <div class="cssICON_bgcs" onclick="LocID='bgcs';imgNum=4;showWind('百果超市商业楼','百果超市位于崇山校区北部，为崇山校区商户区。共有三层楼：\n一楼为超市，电脑维修，摄影等店铺\n二楼为太平洋咖啡和男浴池\n三楼为校园卡中心和女浴池\n桃李园超市开业时间为7:40--21:20','bgcs',3)"><img src="images/icon/bgcs.png" width="62"  /></div>
+	  <div class="cssICON_bgcs" onclick="LocID='bgcs';imgNum=4;showWind('百果超市商业楼','百果超市位于崇山校区北部，为崇山校区商户区。共有三层楼：\n一楼为超市，电脑维修，摄影等店铺 \n二楼为太平洋咖啡和男浴池 \n三楼为校园卡中心和女浴池 \n桃李园超市开业时间为7:40--21:20','bgcs',3)"><img src="images/icon/bgcs.png" width="62"  /></div>
 		
 		
 	<div class="cssAuth" style="top: 540px">
 	  <p> <b>此图为在校学生自制图。非官方平面图，仅供参考。</b></p>
-	  <p> <hr>Minecraft相思故 制作<br>反馈a邮箱：3180235660@qq.com&nbsp;</p>
+	  <p> <hr>Minecraft相思故 制作<br>反馈邮箱：3180235660@qq.com&nbsp;</p>
 	</div>
 </div>
 </body>
