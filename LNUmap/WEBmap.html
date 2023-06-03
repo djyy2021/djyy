@@ -2,7 +2,8 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>WEB地图</title>
+<title>辽宁大学崇山校区WEB地图</title>
+<link rel="shortcut icon"href="images/icon/favicon.ico">
 <style typr="text/css">
 	.father
 	{
@@ -14,7 +15,7 @@
 	.cssWind
 	{
 		position: absolute;
-		left:360px;
+		left:305px;
 		top:120px;
 		z-index:15;
 		width:750px;
@@ -33,7 +34,7 @@
 	.cssWinImgDiv
 	{
 		position:absolute;
-		left:35px;
+		left:108px;
 		top:35px;
 		z-index=16;
 		width:300px;
@@ -43,7 +44,7 @@
 	.cssWinImgDivBG
 	{
 		position:absolute;
-		left:31px;
+		left:104px;
 		top:31px;
 		z-index=15;
 		width:308px;
@@ -53,8 +54,8 @@
 	.cssWinInfDiv
 	{
 		position:absolute;
-		left:380px;
-		top:100px;
+		left:450px;
+		top:110px;
 		z-index=16;
 		width:330px;
 		height:255px;
@@ -62,7 +63,7 @@
 	.cssWinTitleDiv
 	{
 		position:absolute;
-		left:380px;
+		left:450px;
 		top:35px;
 		z-index=16;
 		width:330px;
@@ -74,7 +75,7 @@
 	.cssWinClose
 	{
 		position:absolute;
-		left:570px;
+		left:660px;
 		top:400px;
 		z-index=16;
 		width:140px;
@@ -96,7 +97,7 @@
 	.cssSwapButton
 	{
 		position:absolute;
-		left:380px;
+		left:450px;
 		top:400px;
 		z-index=16;
 		width:60px;
@@ -107,7 +108,7 @@
 	.cssSwapButton_2
 	{
 		position:absolute;
-		left:450px;
+		left:520px;
 		top:400px;
 		z-index=16;
 		width:60px;
@@ -387,7 +388,7 @@
 	
 	<div id="main" class="cssBG"> 
 		<div id="winBG" class="cssWindBG" onclick="closeWind()"></div>
-<div id="infoWind" class="cssWind" ><img src="images/wind.png" width="840">
+<div id="infoWind" class="cssWind" ><img src="images/wind.png" width="920">
 		  <div id="left_button" class="cssSwapButton" onclick="Loc=(Loc+imgNum-1)%imgNum;change(Loc,LocID);"><div class="cssWinClose_2">&nbsp;上一张</div>
 		  </div>
 		  <div id="right_button" class="cssSwapButton_2" onClick="Loc=(Loc+1)%imgNum;change(Loc,LocID);"><div class="cssWinClose_2">&nbsp;下一张</div>
@@ -408,9 +409,9 @@
 	  <div class="cssICON_6_she" onclick="LocID='6_she';imgNum=3;showWind('六舍学生宿舍','六舍学生宿舍位于辽宁大学崇山校区西北部，男寝，本科生宿舍。基本配置：六人寝上床下桌,配备有阳台，无独立卫浴。','6_she',3)"><img src="images/icon/6_she.png" width="134" height="26" /></div>
 	  <div class="cssICON_hui_xing" onclick="LocID='hui_xing_lou';imgNum=14;showWind('蕙星楼','蕙星楼位于辽宁大学正南部，是一栋白色10层教学楼，为老校区最大的教学楼。楼内有教室，一楼有化学实验室，听力教室位于九楼。楼内配有两部电梯，楼后的小门周末不开放。<br>蕙星楼开放时间：6：00--21：30','hui_xing_lou',14)"><img src="images/icon/hui_xing_lou.png" width="150"  /></div>
 	  <div class="cssICON_dong_pei_lou" onclick="LocID='dong_pei_lou';imgNum=4;showWind('东配楼','7层阶梯教室楼，每层3间大型阶梯教室，每间教室可容纳200人。','dong_pei_lou',4)"><img src="images/icon/dong_pei_lou.png" width="33.5"  /></div>
-	  <div class="cssICON_tao_li_yuan" onclick="LocID='tao_li_yuan_shi_tang';imgNum=4;showWind('桃李园食堂','崇山校区最大的食堂，共有三层。','tao_li_yuan_shi_tang',2)"><img src="images/icon/tao_li_yuan_shi_tang.png" width="6"  /></div>
+	  <div class="cssICON_tao_li_yuan" onclick="LocID='tao_li_yuan_shi_tang';imgNum=4;showWind('桃李园食堂','崇山校区最大的食堂，共有三层。','tao_li_yuan_shi_tang',2)"><img src="images/icon/tao_li_yuan_shi_tang.png" width="64"  /></div>
 	  <div class="cssICON_2_she" onclick="LocID='2_she';imgNum=4;showWind('学生宿舍二舍','学生宿舍二舍为女寝，宿舍楼于2000年竣工，共七层，宿舍配备有阳台。','2_she',3)"><img src="images/icon/2_she.png" width="55"  /></div>
-	  <div class="cssICON_bgcs" onclick="LocID='bgcs';imgNum=4;showWind('百果超市商业楼','百果超市位于崇山校区北部，为崇山校区商户区。共有三层楼：<br>一楼为超市，电脑维修，摄影等店铺 <br>二楼为太平洋咖啡和男浴池 <br>三楼为校园卡中心和女浴池 <br>桃李园超市开业时间为7:40--21:20','bgcs',3)"><img src="images/icon/bgcs.png" width="62"  /></div>
+	  <div class="cssICON_bgcs" onclick="LocID='bgcs';imgNum=4;showWind('百果超市商业楼','百果超市位于崇山校区北部，为崇山校区商户区。共有三层楼：<br>一楼为超市，电脑维修，摄影等店铺 <br>二楼为太平洋咖啡和男浴池 <br>三楼为校园卡中心和女浴池 <br>百果超市开业时间为7:40--21:20','bgcs',3)"><img src="images/icon/bgcs.png" width="62"  /></div>
 		
 		
 		
