@@ -3,6 +3,16 @@
 <head>
 <meta charset="utf-8">
 <title>标题未定</title>
+	
+	<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?a8350f5ba21f42c411009674f5a26528";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
 	<style type="text/css">
 		.menu{
    			position: absolute;
@@ -55,11 +65,12 @@
 		{
 			position:absolute;
 			top:50px;
-			width:90px;
+			width:120px;
 			font-family:"宋体";
 			text-align: center;
 			display: inline-block;
 			background-color:#AED1FA; 
+			z-index: 10;
 			
 		}
 		.downText a{
@@ -119,11 +130,66 @@
 		{
 			background-color: #AED1FA
 		}
+		.MC {
+			font-size: 16px;
+			color: #FFCC66;
+			position: absolute;
+			width: 203px;
+			height: 43px;
+			z-index: 2;
+			left: 1250px;
+			top: 45px;
+			transform: rotate(20deg);
+		}
+		.lunbo
+		{
+			position: absolute;
+			top:60px;
+			left:15px;
+			width=800px;
+			height=600;
+		}
+		.readme
+		{
+			position: absolute;
+			top:60px;
+			left:900px;
+			width=900px;
+			height=600;
+		}
 	</style>
 	
 </head>
 
-<body>
+<body onLoad="showMinecraft()">
+	
+	<script>
+function showMinecraft()
+{
+	var minecDi = document.getElementById("minec");
+	var px = 23;
+    var i = 1;
+	console.log(`start size=${px}`);
+    function fn() {
+        console.log(`114514 size=${px}`);
+        px = 23 + 2 * (Math.sin(i * 0.2));
+        var styleStr = `font-size:${px}px;`;
+        minecDi.setAttribute("style", styleStr);
+        i++;
+	}
+	setInterval(fn,25)
+
+
+	}
+	
+</script>
+	
+	
+	
+	
+	
+	
+	
 <div class="menu" >
   <div class="pageTitle">djyy24.top</div>
   <div class="order0" onclick="window.open('http://djyy24.top',_self)"><div style="font-family: 宋体;position:absolute; top:15px; width:75px;left:10px;" > 主 &nbsp;页 </div></div>
@@ -162,7 +228,20 @@
   </div>
 	
 	  <div class="order4" onclick="window.open('http://djyy24.top/404.html',_self)"><div style="font-family: 宋体;position:absolute; top:15px; width:75px;left:10px;" >手作产出</div></div>
-	
+	<div class="MC" id="minec" style="font-size:27px;">Minecraft</div>
 </div>
+	<div class="lunbo"><img src="images/lunbo/4.png" width="800" alt=""/></div>
+	<div class="readme">
+		<br><br><div style="font-size: 30px">About</div><hr>【关于手作】
+		<br>2006年10月入坑手作，以纸艺为主
+<br>2011年7月制作首个建筑模型
+<br>2022年6月开始制作更多种类的手作
+<br>2023年1月学习制作发簪等汉服配饰<br>
+<br>【关于Minecraft】
+<br>2016年1月入坑Minecraft（入坑版本1.3.1）
+<br>2021年3月开始制作建筑，主要为苏联风格和中国风格&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>2021年8月制作相关剪辑视频
+<br>2023年2月开始学习模组开发
+<br>2023年2月末，B站投稿视频首次破万</div>
 </body>
 </html>
