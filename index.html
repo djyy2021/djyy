@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>标题未定</title>
+<title>Minecraft相思故</title>
 	
 	<script>
 var _hmt = _hmt || [];
@@ -144,6 +144,7 @@ var _hmt = _hmt || [];
 			z-index: 2;
 			left: 1330px;
 			top: 45px;
+			cursor: pointer;
 			transform: rotate(20deg);
 		}
 		.lunbo
@@ -272,9 +273,7 @@ var _hmt = _hmt || [];
 			
 			
 			
-			
-			
-			
+			let autoplay=setInterval(handleRightBtn,3000);
 			const oWarp=document.getElementById("wrap");
 			
 			
@@ -286,9 +285,15 @@ var _hmt = _hmt || [];
 
 <body >
 	<script>
-function showMinecraft()
-{
-	var minecDi = document.getElementById("minec");
+		var ab=0;
+function showMinecraft(aa)
+{	var minecDi = document.getElementById("minec");
+	if(ab%2==1)
+	{
+        var styleStr = `font-size:27px;`;
+        minecDi.setAttribute("style", styleStr);
+		return;
+	}
 	var px = 23;
     var i = 1;
     function fn() {
@@ -348,7 +353,7 @@ function showMinecraft()
   </div>
 	
 	  <div class="order4" onclick="window.open('http://djyy24.top/404.html',_self)"><div style="font-family: 宋体;position:absolute; top:15px; width:75px;left:10px;" >手作产出</div></div>
-	<div class="MC" id="minec" style="font-size:27px;">Minecraft</div>
+	<div class="MC" id="minec" style="font-size:27px;" onclick="showMinecraft(++ab)">Minecraft</div>
 </div>
 	<div class="lunbo">
 	
