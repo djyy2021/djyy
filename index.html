@@ -18,7 +18,7 @@ var _hmt = _hmt || [];
    			position: absolute;
 			top:0px;
     		left: 0px;
-    		width: 100%;
+    		width: 1600px;
     		height: 50px;
     		background: #8dbcf4;			
 			
@@ -26,7 +26,7 @@ var _hmt = _hmt || [];
 		.pageTitle{
 			position: absolute;
 			left: 20px;
-			top:6px;
+			top:8px;
 			font-size: 28px;
 			color:aliceblue;
 			background: #8dbcf4;
@@ -39,11 +39,13 @@ var _hmt = _hmt || [];
 			font-size: 17px;
 			height:50px;
 			width:90px;
+			transition: 0.5s;
 			
 		}
 		.order0:hover
 		{
 			background-color: #AED1FA;
+			cursor: pointer;
 		}
 		.order1
 		{
@@ -77,6 +79,7 @@ var _hmt = _hmt || [];
 			display:none;
 			padding:10px;
 			text-decoration: none;
+			transition: 0.5s;
 		}
 		.downText a:hover{
 			background-color:#C3DCF9; 
@@ -125,10 +128,12 @@ var _hmt = _hmt || [];
 			font-size: 17px;
 			height:50px;
 			width:90px;
+			transition: 0.5s;
 		}
 		.order4:hover
 		{
-			background-color: #AED1FA
+			background-color: #AED1FA;
+			cursor: pointer;
 		}
 		.MC {
 			font-size: 16px;
@@ -137,41 +142,156 @@ var _hmt = _hmt || [];
 			width: 203px;
 			height: 43px;
 			z-index: 2;
-			left: 1250px;
+			left: 1330px;
 			top: 45px;
 			transform: rotate(20deg);
 		}
 		.lunbo
 		{
 			position: absolute;
-			top:60px;
-			left:15px;
-			width=800px;
-			height=600;
+			top:50px;
+			left:0px;
+			width=760px;
+			height=540;
 		}
 		.readme
 		{
 			position: absolute;
-			top:60px;
-			left:900px;
-			width=900px;
-			height=600;
+			top:40px;
+			font-size: 20px;
+			font-family: "宋体";
+			left:840px;
+			width:600px;
+			height:600px;
 		}
+		li
+		{
+			list-style: none;
+		}
+		#wrap
+		{
+			position:relative;
+			width:760px;
+			margin:0px;
+			overflow:hidden;
+			border-radius:0px;
+		}        
+
+
+		#wrap .img-list
+		{
+			position:relative;
+			left:0px;
+			width:100%;
+			height:100%;
+			display:flex;
+			transition: .5s ease;
+		}
+		#wrap .img-list img
+		{
+			width=100%;
+		}
+		#wrap .arrow button
+		{
+			position:absolute;
+			top:50%;
+			margin-top:-30px;
+			width:60px;
+			height:60px;
+			font:30px 'icomoon';
+			color:rgb(255,255,255);
+			background-color: transparent;
+			cursor: pointer;
+			border:none;
+			border-radius:50%;
+		}
+		#wrap .arrow button:hover
+		{
+			background-color:rgba(0,0,0,3);
+		}
+		#wrap .arrow button:nth-child(1)
+		{
+			padding-left:20px;
+			left:-25px;
+		}
+		#wrap .arrow button:nth-child(2)
+		{
+			padding-left:20px;
+			left:-25px;
+		}
+		
+		
+		
+		
 	</style>
-	
+	<script>
+		window.onload=function()
+		{
+			let oLeft=document.querySelector(".left");
+			let oRight=document.querySelector(".right");
+			let oImgList=document.querySelector(".img-list");
+			
+			let clonefirstImg=oImgList.firstElementChild.cloneNode();
+			oImgList.appendChild(clonefirstImg);
+			
+			let index=1;
+			let lock=true;
+			function handleRightBtn()
+			{
+				oImgList.style.transition = "0.5s ease";
+				console.log("abcdefg");
+				console.log(index);
+				if(!lock)
+					return;
+				
+				if(index<=5)
+				{oImgList.style.left=index*(-760)+"px";
+					index++;
+				oImgList.style.transtion="0.5s ease";}
+				if(index==6)
+				{console.log("返回");
+					index=1;
+					
+					setTimeout(() => {
+                    oImgList.style.left = 0;
+                    oImgList.style.transition = "none";
+                }, 500);oImgList.style.transition = "0.5s ease";
+				}
+				//setCircles();
+				setTimeout(()=>{
+				lock=true;
+				},500);
+				
+			}
+			oRight.addEventListener("click",handleRightBtn);
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			const oWarp=document.getElementById("wrap");
+			
+			
+			
+			
+		}
+	</script>
 </head>
 
-<body onLoad="showMinecraft()">
-	
+<body >
 	<script>
 function showMinecraft()
 {
 	var minecDi = document.getElementById("minec");
 	var px = 23;
     var i = 1;
-	console.log(`start size=${px}`);
     function fn() {
-        console.log(`114514 size=${px}`);
         px = 23 + 2 * (Math.sin(i * 0.2));
         var styleStr = `font-size:${px}px;`;
         minecDi.setAttribute("style", styleStr);
@@ -192,7 +312,7 @@ function showMinecraft()
 	
 <div class="menu" >
   <div class="pageTitle">对江邀月·相思故</div>
-  <div class="order0" onclick="window.open('http://djyy24.top',_self)"><div style="font-family: 宋体;position:absolute; top:15px; width:75px;left:10px;" > 主 &nbsp;页 </div></div>
+  <div class="order0" onclick="window.open('http://djyy24.top',_self)"><div style="font-family: 宋体;position:absolute; top:15px; width:75px;left:10px;" >主&nbsp;&nbsp;页 </div></div>
 	
 	
 	
@@ -230,7 +350,24 @@ function showMinecraft()
 	  <div class="order4" onclick="window.open('http://djyy24.top/404.html',_self)"><div style="font-family: 宋体;position:absolute; top:15px; width:75px;left:10px;" >手作产出</div></div>
 	<div class="MC" id="minec" style="font-size:27px;">Minecraft</div>
 </div>
-	<div class="lunbo"><img src="images/lunbo/4.png" width="800" alt=""/></div>
+	<div class="lunbo">
+	
+	<div id="wrap">
+	<div class="img-list">
+            <img src="images/lunbo/0.png" width="760px" alt="">
+            <img src="images/lunbo/1.png" width="760px" alt="">
+            <img src="images/lunbo/2.png" width="760px" alt="">
+            <img src="images/lunbo/3.png" width="760px" alt="">
+            <img src="images/lunbo/4.png" width="760px" alt=""></div>
+	<div>按钮：
+	<button type="button" class="left">←</button>
+	<button type="button" class="right">→</button>
+	</div>
+	
+</div>
+	
+	
+	</div>
 	<div class="readme">
 		<br><br><div style="font-size: 30px">About</div><hr>【关于手作】
 		<br>2006年10月入坑手作，以纸艺为主
@@ -239,7 +376,7 @@ function showMinecraft()
 <br>2023年1月学习制作发簪等汉服配饰<br>
 <br>【关于Minecraft】
 <br>2016年1月入坑Minecraft（入坑版本1.3.1）
-<br>2021年3月开始制作建筑，主要为苏联风格和中国风格&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>2021年3月开始制作建筑，主要为苏联风格和中国风格&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <br>2021年8月制作相关剪辑视频
 <br>2023年2月开始学习模组开发
 <br>2023年2月末，B站投稿视频首次破万</div>
