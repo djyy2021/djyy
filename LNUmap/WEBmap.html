@@ -510,7 +510,32 @@
 	
 	
 	
-	
+	.menu1
+	{
+    position: absolute;
+    left: 894px;
+    top: 101px;
+		z-index:5;
+	}.menu2
+	{
+    position: absolute;
+    left: 894px;
+    top: 101px;
+		z-index: 4;
+	}
+	.menu1Bg
+	{
+    position: absolute;
+    left: 894px;
+    top: 101px;
+		z-index:3;
+	}.menu2Bg
+	{
+    position: absolute;
+    left: 894px;
+    top: 101px;
+		z-index: 3;
+	}
 	.author
 	{
 		
@@ -522,8 +547,8 @@
 	.cssICON_Title
 	{
     position: absolute;
-    left: 890px;
-    top: 15px;
+    left: 1085px;
+    top: 8px;
     z-index: 2;
 	}
 	.cssICON_TL
@@ -533,6 +558,58 @@
     top: 320px;
     z-index: 2;
 	}
+	.menu_title_1
+	{
+    position: absolute;
+    left: 897px;
+    top: 98px;
+		height:40px;
+		width:90px;
+    z-index: 6;
+	}
+	.menu_title_1:hover
+	{
+		cursor: pointer
+	}
+	.menu_title_2
+	{
+    position: absolute;
+    left: 987px;
+    top: 98px;
+		height:40px;
+		width:380px;
+    z-index: 6;
+	}
+	.menu_title_2:hover
+	{
+		cursor: pointer
+	}
+	.menu_page_1
+	{
+		position: absolute;
+		left: 10px;
+		top:50px;
+		width: 540px;
+	}
+	.menu_page_2
+	{
+		position: absolute;
+		left: 10px;
+		top:50px;
+		width: 540px;
+	}
+	.menu_page_1
+	{
+		position: absolute;
+		left: 10px;
+		top:50px;
+		width: 540px;
+	}
+	
+	
+	
+	
+	
 	.cssAuth
 	{
     position: absolute;
@@ -548,6 +625,22 @@
 		var Loc=0;
 		var imgNum=0;
 		var LocID="";
+		function showMenu1()
+		{
+			var aa=document.getElementById("menu11");
+			var bb=document.getElementById("menu22");
+			aa.style.visibility="visible";
+			bb.style.visibility="hidden";
+		}
+		function showMenu2()
+		{
+			var aa=document.getElementById("menu22");
+			var bb=document.getElementById("menu11");
+			aa.style.visibility="visible";
+			bb.style.visibility="hidden";
+		}
+		
+		
 		function change(UD,LocID)
 		{
 			var imgDiv=document.getElementById("ImageDiv");
@@ -603,7 +696,7 @@
 		
 		</div>
 <img src="mapBack.png" width="1200"/>
-	  <div class="cssICON_Title"><img src="images/Title.png" width="580" alt=""/></div>
+	  <div class="cssICON_Title"><img src="images/Title.png" width="400" alt=""/></div>
 	  <div class="cssICON_TL"><img src="images/tl.png" width="180" alt=""/></div>	
 		
 		
@@ -650,6 +743,38 @@
 	  <p> <b>此图为在校学生自制图。非官方平面图，仅供参考。</b></p>
 	  <p> <hr><div onClick="location='http://djyy24.top'" class="author">Minecraft相思故 制作</div>反馈邮箱：3180235660@qq.com&nbsp;</p>
 	</div>
+	<div class="menu1Bg">
+	  <img src="images/menu1.png" width="560" alt=""/>
+	</div>
+	<div class="menu2Bg">
+	  <img src="images/menu2.png" width="560" alt=""/> 
+	</div>
+	
+	
+	
+	
+	
+	<div id="menu11" class="menu1">
+	  <img src="images/menu1.png" width="560" alt=""/>
+		<div class= "menu_page_1">
+			输入地点：<input>
+			</input>
+		&nbsp;
+		<button>搜索</button><br>开发中
+		</div>	
+	</div>
+	<div id="menu22" class="menu2">
+	  <img src="images/menu2.png" width="560" alt=""/> 
+		<div class= "menu_page_2">
+			开发中...
+		</div>	
+	</div>
+	<div class="menu_title_1" onClick="showMenu1();">
+	  <div style="position: absolute; left: 14px; top: 10px;">搜索地点</div> </div>
+	<div class="menu_title_2" onClick="showMenu2();">
+	  <div style="position: absolute;left: 17px; top:10px;"> 生活指南</div> </div>
+	
+	
 </div>
 </body>
 </html>
