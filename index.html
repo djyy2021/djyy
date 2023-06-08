@@ -18,10 +18,16 @@ var _hmt = _hmt || [];
    			position: absolute;
 			top:0px;
     		left: 0px;
-    		width: 1600px;
+    		width: 1528px;
     		height: 50px;
     		background: #8dbcf4;			
 			
+		}
+		.copyright
+		{position: absolute;
+			left:500px;
+			top:1000px;
+			font-family: "宋体";
 		}
 		.pageTitle{
 			position: absolute;
@@ -149,21 +155,21 @@ var _hmt = _hmt || [];
 		}
 		.lunbo
 		{
-			position: absolute;
-			top:50px;
-			left:0px;
-			width=760px;
-			height=540;
+    position: absolute;
+    top: 400px;
+    left: 25px;
+			width=640px;
+			height=480;
 		}
 		.readme
 		{
-			position: absolute;
-			top:40px;
-			font-size: 20px;
-			font-family: "宋体";
-			left:840px;
-			width:600px;
-			height:600px;
+    position: absolute;
+    top: 366px;
+    font-size: 20px;
+    font-family: "宋体";
+    left: 800px;
+    width: 600px;
+    height: 600px;
 		}
 		li
 		{
@@ -172,10 +178,10 @@ var _hmt = _hmt || [];
 		#wrap
 		{
 			position:relative;
-			width:760px;
+			width:640px;
 			margin:0px;
 			overflow:hidden;
-			border-radius:0px;
+			border-radius:14px;
 		}        
 
 
@@ -228,6 +234,7 @@ var _hmt = _hmt || [];
 	<script>
 		window.onload=function()
 		{
+			showMinecraft();
 			let oLeft=document.querySelector(".left");
 			let oRight=document.querySelector(".right");
 			let oImgList=document.querySelector(".img-list");
@@ -246,7 +253,7 @@ var _hmt = _hmt || [];
 					return;
 				
 				if(index<=5)
-				{oImgList.style.left=index*(-760)+"px";
+				{oImgList.style.left=index*(-640)+"px";
 					index++;
 				oImgList.style.transtion="0.5s ease";}
 				if(index==6)
@@ -273,7 +280,7 @@ var _hmt = _hmt || [];
 			
 			
 			
-			let autoplay=setInterval(handleRightBtn,3500);
+			let autoplay=setInterval(handleRightBtn,3000);
 			const oWarp=document.getElementById("wrap");
 			
 			
@@ -286,7 +293,7 @@ var _hmt = _hmt || [];
 <body >
 	<script>
 		var ab=0;
-function showMinecraft(aa)
+function showMinecraft()
 {	var minecDi = document.getElementById("minec");
 	if(ab%2==1)
 	{
@@ -355,15 +362,17 @@ function showMinecraft(aa)
 	  <div class="order4" onclick="window.open('http://djyy24.top/404.html',_self)"><div style="font-family: 宋体;position:absolute; top:15px; width:75px;left:10px;" >手作产出</div></div>
 	<div class="MC" id="minec" style="font-size:27px;" onclick="showMinecraft(++ab)">Minecraft</div>
 </div>
-	<div class="lunbo">
+	<div style="left:-32px;top:50px;position: absolute;">
+		<img src="images/hd.png" width="1560px" alt=""/> </div>
+<div class="lunbo">
 	
 	<div id="wrap">
 	<div class="img-list">
-            <img src="images/lunbo/0.png" width="760px" alt="">
-            <img src="images/lunbo/1.png" width="760px" alt="">
-            <img src="images/lunbo/2.png" width="760px" alt="">
-            <img src="images/lunbo/3.png" width="760px" alt="">
-            <img src="images/lunbo/4.png" width="760px" alt=""></div>
+            <img src="images/lunbo/0.png" width="640px" alt="">
+            <img src="images/lunbo/1.png" width="640px" alt="">
+            <img src="images/lunbo/2.png" width="640px" alt="">
+            <img src="images/lunbo/3.png" width="640px" alt="">
+            <img src="images/lunbo/4.png" width="640px" alt=""></div>
 	<div>按钮：
 	<button type="button" class="left">←</button>
 	<button type="button" class="right">→</button>
@@ -381,9 +390,12 @@ function showMinecraft(aa)
 <br>2023年1月学习制作发簪等汉服配饰<br>
 <br>【关于Minecraft】
 <br>2016年1月入坑Minecraft（入坑版本1.3.1）
-<br>2021年3月开始制作建筑，主要为苏联风格和中国风格&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>2021年3月开始制作城市建筑&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <br>2021年8月制作相关剪辑视频
 <br>2023年2月开始学习模组开发
 <br>2023年2月末，B站投稿视频首次破万</div>
+<div class="copyright"><hr style="position: absolute;left:-490px;width:1500px"><br><br>
+	Copyright©2023 Minecraft相思故|对江邀月24&nbsp;&nbsp;&nbsp;&nbsp;2023.4.6制作|2023.6.8更新<br><br>
+</div>
 </body>
 </html>
