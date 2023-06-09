@@ -617,6 +617,38 @@
     z-index: 2;
     top: 0px;
 	}
+	.search_downmenu
+	{
+    position: absolute;
+    left: 80px;
+    z-index: 7;
+    top: 23px;
+    width: 159px;
+    height: 170px;
+    background_color: #ffffff;
+    border: 1px solid #000000;
+		visibility:hidden;
+	}
+	.inner_downmenu
+	{
+		position: absolute;
+		left: 5px;
+		width:154px;
+		height: 150px;
+		overflow-y: scroll;
+		
+		
+	}
+	.closedownmenu
+	{
+		position: absolute;
+		left: 5px;
+		width:154px;
+		height:25px;
+		top:150px;
+	
+	}
+	
 	</style>
 </head>
 
@@ -672,6 +704,26 @@
 			var windBG=document.getElementById("winBG");
 			wind.style.visibility="hidden";
 			winBG.style.visibility="hidden";
+		}
+
+
+function showDownMenu()
+		{
+			document.getElementById("downmenu").style.visibility="visible";
+		}
+		function closeDownMenu()
+		{
+			document.getElementById("downmenu").style.visibility="hidden";
+		}
+		function setInput(str)
+		{
+			document.getElementById("search_input").value=str;
+		}
+		function search()
+		{
+			var inp=document.getElementById("search_input")
+			var stri=inp.value;
+			console.log('搜索：'+stri);
 		}
 	</script>
 	
@@ -760,13 +812,30 @@
 			输入地点：<input>
 			</input>
 		&nbsp;
-		<button>搜索</button><br>开发中
+		<button onclick="search()">搜索</button><br>开发中，此处为指南帮助信息。模糊搜索功能尚未实装。
+		<div id="downmenu" class="search_downmenu">
+			<div class="inner_downmenu">
+			<li onclick="setInput('蕙星楼')">蕙星楼</li>
+			<li onclick="setInput('东配楼)">东配楼</li>
+			<li onclick="setInput('东阶梯')">东阶梯</li>
+			<li onclick="setInput('西阶梯')">西阶梯</li>
+			<li onclick="setInput('图书馆')">图书馆</li>
+			<li onclick="setInput('机关楼')">机关楼</li>
+			<li onclick="setInput('哲理楼')">哲理楼</li>
+			<li onclick="setInput('理贤楼')">理贤楼</li>
+			<li onclick="setInput('七舍')">七舍</li>
+			<li onclick="setInput('三食堂')">三食堂</li>
+			</div>
+			<div class="closedownmenu" onclick="closeDownMenu()">
+				收起
+			</div>
+			</div>
 		</div>	
 	</div>
 	<div id="menu22" class="menu2">
 	  <img src="images/menu2.png" width="560" alt=""/> 
 		<div class= "menu_page_2">
-			开发中...
+			开发中...<button>交电费</button><button>取快递</button><button>订水</button>
 		</div>	
 	</div>
 	<div class="menu_title_1" onClick="showMenu1();">
