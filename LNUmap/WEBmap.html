@@ -715,15 +715,43 @@ function showDownMenu()
 		{
 			document.getElementById("downmenu").style.visibility="hidden";
 		}
-		function setInput(str)
+		function setInput()
 		{
-			document.getElementById("search_input").value=str;
+var is=event.currentTarget;
+			console.log(is.innerHTML)
+			document.getElementById("search_input").value=is.innerHTML;
 		}
+const locMap=new Map(
+[
+["东配楼","dong_pei_lou"],
+["蕙星楼","hui_xing_lou"],
+["哲理楼","zhe_li_lou"],
+["图书馆","tu_shu_guan"]
+
+
+
+
+
+
+]);
+
+
+
+
+
+
+
+
 		function search()
 		{
+
 			var inp=document.getElementById("search_input")
 			var stri=inp.value;
 			console.log('搜索：'+stri);
+			var loctId=locMap.get(stri);
+console.log('ID:'+loctId);
+			var tempKey='搜索：'+stri+'  ID:'+loctId;
+			document.getElementById("temp").value=tempKey;
 		}
 	</script>
 	
@@ -808,25 +836,19 @@ function showDownMenu()
 	
 <div id="menu11" class="menu1">
 	  <img src="images/menu1.png" width="560" alt=""/>
-		<div class= "menu_page_1">
-			输入地点：<input id="search_input" onclick="console.log(showDownMenu())">
-			</input>
+		<div id="app" class= "menu_page_1">
+			输入地点：<input id="search_input" type="text" v-model='search' onClick="console.log(showDownMenu());"/>
 		&nbsp;
-		<button onclick="search();closeDownMenu()">搜索</button><br>开发中，此处为指南帮助信息。模糊搜索功能尚未实装。
-		<div id="downmenu" class="search_downmenu">
-			<div class="inner_downmenu">
-			<li onclick="setInput('蕙星楼')">蕙星楼</li>
-			<li onclick="setInput('东配楼)">东配楼</li>
-			<li onclick="setInput('东阶梯')">东阶梯</li>
-			<li onclick="setInput('西阶梯')">西阶梯</li>
-			<li onclick="setInput('图书馆')">图书馆</li>
-			<li onclick="setInput('机关楼')">机关楼</li>
-			<li onclick="setInput('哲理楼')">哲理楼</li>
-			<li onclick="setInput('理贤楼')">理贤楼</li>
-			<li onclick="setInput('七舍')">七舍</li>
-			<li onclick="setInput('三食堂')">三食堂</li>
+		<button onclick="search();closeDownMenu()">搜索</button><br>开发中，此处为指南帮助信息。地点搜索功能即将制作完成。<br>搜索结果测试：<input id="temp" style="width=240px;"/>
+
+
+
+		<div id="downmenu" class="search_downmenu"><div class="inner_downmenu">
+			<ul v-for="item in searchData " style="margin:0px;padding:0;">
+    <li style="list-style-type:none;line-height:25px;" onclick="setInput();">{{ item.name }}</li>
+  </ul>
 			</div>
-			<div class="closedownmenu" onclick="closeDownMenu()">
+			<div class="closedownmenu" onclick="closeDownMenu();" style="color:#0000CD">
 				收起
 			</div>
 			</div>
@@ -845,5 +867,84 @@ function showDownMenu()
 	
 	
 </div>
+<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script><script>
+var vm=new Vue({
+el:"#app",
+data:{
+search:'',
+products: [
+        {
+          "name": '图书馆'
+        },
+        {
+          "name": '东阶梯'
+        },
+        {
+          "name": '东配楼'
+        },
+        {
+          "name": '蕙星楼'
+        },
+        {
+          "name": '哲理楼'
+        },
+        {
+          "name": '西阶梯'
+        },
+        {
+          "name": '机关楼'
+        },
+        {
+          "name": '怀远楼'
+        },
+        {
+          "name": '明微楼'
+        },
+        {
+          "name": '溯源楼'
+        },
+        {
+          "name": '理贤楼'
+        },
+        {
+          "name": '辽大出版社'
+        }
+      ]},
+computed:
+{//脚本的标签放在body最后面；录入列表中的name值时在字符串后面加一个空格
+	searchData:function(){
+var search=this.search;
+var searchVal="";//搜索后的数据
+if(search)
+{
+	searchVal=this.products.filter(function(product)
+{
+return Object.keys(product).some(function(key)
+{
+return String(product[key]).toLowerCase().indexOf(search)>-1;
+return String(product['questions']).toLowerCase.indexOf(search)>-1;
+}
+)
+
+}
+)
+return searchVal;
+}
+}	
+
+}
+
+
+
+}
+
+)
+
+
+
+
+
+
+</script>
 </body>
 </html>
