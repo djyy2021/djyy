@@ -625,7 +625,7 @@
     top: 23px;
     width: 159px;
     height: 170px;
-    background_color: #ffffff;
+    background: #ffffff;
     border: 1px solid #000000;
 		visibility:hidden;
 	}
@@ -806,13 +806,13 @@ function showDownMenu()
 	
 	
 	
-	<div id="menu11" class="menu1">
+<div id="menu11" class="menu1">
 	  <img src="images/menu1.png" width="560" alt=""/>
 		<div class= "menu_page_1">
-			输入地点：<input>
+			输入地点：<input id="search_input" onclick="console.log(showDownMenu())">
 			</input>
 		&nbsp;
-		<button onclick="search()">搜索</button><br>开发中，此处为指南帮助信息。模糊搜索功能尚未实装。
+		<button onclick="search();closeDownMenu()">搜索</button><br>开发中，此处为指南帮助信息。模糊搜索功能尚未实装。
 		<div id="downmenu" class="search_downmenu">
 			<div class="inner_downmenu">
 			<li onclick="setInput('蕙星楼')">蕙星楼</li>
