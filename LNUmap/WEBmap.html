@@ -515,8 +515,14 @@
     position: absolute;
     left: 894px;
     top: 101px;
-		z-index:5;
+		z-index:6;
 	}.menu2
+	{
+    position: absolute;
+    left: 894px;
+    top: 101px;
+		z-index: 5;
+	}.menu3
 	{
     position: absolute;
     left: 894px;
@@ -530,6 +536,12 @@
     top: 101px;
 		z-index:3;
 	}.menu2Bg
+	{
+    position: absolute;
+    left: 894px;
+    top: 101px;
+		z-index: 3;
+	}.menu3Bg
 	{
     position: absolute;
     left: 894px;
@@ -577,10 +589,23 @@
     left: 987px;
     top: 98px;
 		height:40px;
-		width:380px;
+		width:90px;
     z-index: 6;
 	}
 	.menu_title_2:hover
+	{
+		cursor: pointer
+	}
+	.menu_title_3
+	{
+    position: absolute;
+    left: 1077px;
+    top: 98px;
+		height:40px;
+		width:90px;
+    z-index: 6;
+	}
+	.menu_title_3:hover
 	{
 		cursor: pointer
 	}
@@ -598,7 +623,7 @@
 		top:50px;
 		width: 540px;
 	}
-	.menu_page_1
+	.menu_page_3
 	{
 		position: absolute;
 		left: 10px;
@@ -661,15 +686,28 @@
 		{
 			var aa=document.getElementById("menu11");
 			var bb=document.getElementById("menu22");
+			var cc=document.getElementById("menu33");
 			aa.style.visibility="visible";
 			bb.style.visibility="hidden";
+			cc.style.visibility="hidden";
 		}
 		function showMenu2()
 		{
-			var aa=document.getElementById("menu22");
-			var bb=document.getElementById("menu11");
-			aa.style.visibility="visible";
+			var aa=document.getElementById("menu11");
+			var bb=document.getElementById("menu22");
+			var cc=document.getElementById("menu33");
+			aa.style.visibility="hidden";
+			bb.style.visibility="visible";
+			cc.style.visibility="hidden";
+		}
+		function showMenu3()
+		{
+			var aa=document.getElementById("menu11");
+			var bb=document.getElementById("menu22");
+			var cc=document.getElementById("menu33");
+			aa.style.visibility="hidden";
 			bb.style.visibility="hidden";
+			cc.style.visibility="visible";
 		}
 		
 		
@@ -951,6 +989,9 @@ console.log('ID:'+loctId);
 	<div class="menu2Bg">
 	  <img src="images/menu2.png" width="560" alt=""/> 
 	</div>
+	<div class="menu3Bg">
+	  <img src="images/menu3.png" width="560" alt=""/> 
+	</div>
 	
 	
 	
@@ -981,11 +1022,18 @@ console.log('ID:'+loctId);
 		<div class= "menu_page_2">
 			开发中...<button>交电费</button><button>取快递</button><button>订水</button><button>校园卡</button><button>校园网</button>
 		</div>	
+	</div><div id="menu33" class="menu3">
+	  <img src="images/menu3.png" width="560" alt=""/> 
+		<div class= "menu_page_3">
+			此平面地图为HTML5互动地图，在平面地图的基础上增加了建筑信息，地点搜索等互动功能。<br>制作互动地图的想法早在一年前就有了，2022年6月曾计划制作Java版的辽大互动地图，但因为Java软件对运行环境有要求，可能不易于使用，最终没有落实。今年学习了WEB开发，借助HTML5灵活易用的特点，制作了这个更易于使用的互动地图。
+		</div>	
 	</div>
 	<div class="menu_title_1" onClick="showMenu1();">
 	  <div style="position: absolute; left: 14px; top: 10px;">搜索地点</div> </div>
 	<div class="menu_title_2" onClick="showMenu2();closeDownMenu()">
 	  <div style="position: absolute;left: 17px; top:10px;"> 生活指南</div> </div>
+	<div class="menu_title_3" onClick="showMenu3();closeDownMenu()">
+	  <div style="position: absolute;left: 17px; top:10px;">&nbsp;&nbsp; 关&nbsp; 于 </div> </div>
 	
 	
 </div>
@@ -1066,12 +1114,6 @@ products: [
         },
         {
           "name": '环境学院'
-        },
-        {
-          "name": '东阶梯'
-        },
-        {
-          "name": '西阶梯'
         },
         {
           "name": '大篮球场'
