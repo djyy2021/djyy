@@ -871,6 +871,7 @@ const locMap=new Map(
 ["创新实践教学中心","zai_jian"],
 ["辽大稀散","xi_san_yuan_su"],
 ["稀散元素","xi_san_yuan_su"],
+["稀散","xi_san_yuan_su"],
 ["化学院","ming_wei_lou"],
 ["化学院楼","ming_wei_lou"],
 ["轻产学院","huai_yuan_lou"],
@@ -881,6 +882,9 @@ const locMap=new Map(
 ["轻产院","huai_yuan_lou"],
 ["轻产","huai_yuan_lou"],
 ["环境","huai_yuan_lou"],
+["药学院","huai_yuan_lou"],
+["药院","huai_yuan_lou"],
+["药学院楼","huai_yuan_lou"],
 ["环境学院楼","huai_yuan_lou"],
 ["轻型产业学院楼","huai_yuan_lou"],
 ["西配楼","hui_xing"],
@@ -896,6 +900,7 @@ const locMap=new Map(
 ["东阶","dong_jie_ti"],
 ["西阶","xi_jie_ti"],
 ["哲经楼","zhe_li_lou"],
+["哲理楼","zhe_li_lou"],
 ["哲理","zhe_li_lou"],
 ["数学院","zhe_li_lou"],
 ["数学与统计学院","zhe_li_lou"],
@@ -916,15 +921,295 @@ const locMap=new Map(
 ["树蕙亭","shu_hui_ting"],
 ["篮球场","lan_qiu_chang"],
 ["大篮球场","lan_qiu_chang"],
+["轻产实训中心","qing_chan_shi_xun_zhong_xin"],
+["轻型产业学院实训中心","qing_chan_shi_xun_zhong_xin"],
+["心理测试实验室","xin_li_ce_shi_shi_yan_shi"],
+["心理测试与行为分析","xin_li_ce_shi_shi_yan_shi"],
+["心理测试与行为分析重点实验室","xin_li_ce_shi_shi_yan_shi"],
+["理贤楼","li_xian_lou"],
+["理贤","li_xian_lou"],
+["物理学院楼","li_xian_lou"],
+["物院","li_xian_lou"],
+["物理学院","li_xian_lou"],
+["物院楼","li_xian_lou"],
+["快递站","kuai_di_zhong_xin"],
+["菜鸟驿站","kuai_di_zhong_xin"],
+["快递中心","kuai_di_zhong_xin"],
+["快递","kuai_di_zhong_xin"],
+["快递点","kuai_di_zhong_xin"],
+["取快递","kuai_di_zhong_xin"],
+["国际教育中心","guo_ji_jiao_yv_zhong_xin"],
+["国际教育","guo_ji_jiao_yv_zhong_xin"],
+["国教中心","guo_ji_jiao_yv_zhong_xin"],
+["研究生院","yan_jiu_sheng_yuan"],
+["博远楼","yan_jiu_sheng_yuan"],
+["操场","cao_chang"],
+["运动场","cao_chang"],
+["足球场","cao_chang"],
+["体育场","cao_chang"],
+["网球场","wang_qiu_chang"],
+["网球","wang_qiu_chang"],
+["百果超市","bgcs"],
+["浴池","bgcs"],
+["校园卡中心","bgcs"],
+["太平洋咖啡","bgcs"],
+["沪上阿姨","bgcs"],
+["水果店","bgcs"],
+["复印","bgcs"],
+["澡堂子","bgcs"],
+["澡堂","bgcs"],
+["健身中心","jian_shen_zhong_xin"],
+["健身房","jian_shen_zhong_xin"],
+["斯巴达健身中心","jian_shen_zhong_xin"],
+["斯巴达","jian_shen_zhong_xin"],
+["桃李园食堂","tao_li_yuan"],
+["桃李园","tao_li_yuan"],
+["一食堂","tao_li_yuan"],
+["1食堂","tao_li_yuan"],
+["二食堂","tao_li_yuan"],
+["2食堂","tao_li_yuan"],
+["公共基础学院","hui_xing"],
+["杏坛咖啡","xing_tan_ka_fei"],
+["变电所","pei_dian_shi"],
+
+["杏坛","xing_tan_ka_fei"],
+["体育馆","ti_yv_guan"],
+["乒乓球馆","ti_yv_guan"],
+["排球场","pai_qiu_chang"],
+["排球","pai_qiu_chang"],
+["乒乓球","ti_yv_guan"],
+["马克思主义学院","ma_yuan_lou"],
+["马院","ma_yuan_lou"],
+["马克思主义学院楼","ma_yuan_lou"],
+["马院楼","ma_yuan_lou"],
+["学府九号","xue_fu_jiu_hao"],
+["学府9号","xue_fu_jiu_hao"],
+["后勤","hou_qin"],
+["后勤发展集团","hou_qin"],
+["校医院","xiao_yi_yuan"],
+["医院","xiao_yi_yuan"],
+["小篮球场","xiao_lan_qiu_chang"],
+["清真食堂","qing_zhen_shi_tang"],
+["三食堂","san_shi_tang"],
+["3食堂","san_shi_tang"],
+["四食堂","si_shi_tang"],
+["4食堂","si_shi_tang"],
+["三四食堂","san_shi_tang"],
+["大学生活动中心","da_xue_sheng_huo_dong_zhong_xin"],
+["活动中心","da_xue_sheng_huo_dong_zhong_xin"],
+["大活","da_xue_sheng_huo_dong_zhong_xin"],
+["交电费","jiao_dian_fei"],
+["电费缴纳","jiao_dian_fei"],
+["电费","jiao_dian_fei"],
+["打印店","da_yin_dian"],
+["印刷厂","da_yin_dian"],
+["五洲园","li_an_min_yan_jiu_yuan"],
+["五洲园宾馆","li_an_min_yan_jiu_yuan"],
+["经济研究院","li_an_min_yan_jiu_yuan"],
+["李安民经济研究院","li_an_min_yan_jiu_yuan"],
+["正门","zheng_men"],
+["东南门","dong_nan_men"],
+["南门","zheng_men"],
+["树蕙亭","shu_hui_ting"],
+["图书馆","tu_shu_guan"],
+["阅览室","tu_shu_guan"]
 
 
-["图书馆","tu_shu_guan"]
 
 
 
 
+]);
 
 
+
+
+const locHelpMap=new Map(
+[
+["东配楼","dong_pei_lou"],
+["蕙星楼","hui_xing"],
+["蕙星","hui_xing"],
+["彗星楼","hui_xing"],
+["彗星","hui_xing"],
+["一舍","1_she"],
+["二舍","2_she"],
+["三舍","3_she"],
+["四舍","4_she"],
+["五舍","5_she"],
+["六舍","6_she"],
+["七舍","7_she"],
+["八舍","8_she"],
+["九舍","9_she"],
+["十舍","10_she"],
+["十五舍","15_she"],
+["十六舍","16_she"],
+["1舍","1_she"],
+["2舍","2_she"],
+["3舍","3_she"],
+["4舍","4_she"],
+["5舍","5_she"],
+["6舍","6_she"],
+["7舍","7_she"],
+["8舍","8_she"],
+["9舍","9_she"],
+["10舍","10_she"],
+["15舍","15_she"],
+["16舍","16_she"],
+["博士楼","bo_shi_lou"],
+["法硕公寓","fa_shuo_gong_yv"],
+["翰林园","han_lin_yuan"],
+["留学生宿舍","liu_xue_sheng_su_she"],
+["留学生公寓","liu_xue_sheng_su_she"],
+["友园","liu_xue_sheng_su_she"],
+["友园公寓","liu_xue_sheng_su_she"],
+["明微楼","ming_wei_lou"],
+["文化科技园","wen_hua_ke_ji_yuan"],
+["科技园","wen_hua_ke_ji_yuan"],
+["创新实践教学中心","zai_jian"],
+["辽大稀散","xi_san_yuan_su"],
+["稀散元素","xi_san_yuan_su"],
+["稀散","xi_san_yuan_su"],
+["化学院","ming_wei_lou"],
+["化学院楼","ming_wei_lou"],
+["轻产学院","huai_yuan_lou"],
+["怀远楼","huai_yuan_lou"],
+["环境学院","huai_yuan_lou"],
+["轻型产业","huai_yuan_lou"],
+["轻型产业学院","huai_yuan_lou"],
+["轻产院","huai_yuan_lou"],
+["轻产","huai_yuan_lou"],
+["环境","huai_yuan_lou"],
+["药学院","huai_yuan_lou"],
+["药院","huai_yuan_lou"],
+["药学院楼","huai_yuan_lou"],
+["环境学院楼","huai_yuan_lou"],
+["轻型产业学院楼","huai_yuan_lou"],
+["西配楼","西配楼为蕙星楼一部分，和东配楼相对，楼门平时不开，需要先进入蕙星楼通过走廊进入西配楼。"],
+
+["礼堂","da_li_tang"],
+["大礼堂","da_li_tang"],
+["继续教育学院","ji_jiao"],
+["继教学院","ji_jiao"],
+["继教","ji_jiao"],
+["东配","dong_pei_lou"],
+["东阶梯","dong_jie_ti"],
+["西阶梯","xi_jie_ti"],
+["东阶","dong_jie_ti"],
+["西阶","xi_jie_ti"],
+["哲经楼","zhe_li_lou"],
+["哲理楼","zhe_li_lou"],
+["哲理","zhe_li_lou"],
+["数学院","zhe_li_lou"],
+["数学与统计学院","zhe_li_lou"],
+["信息学院","信息学院位于哲理楼，实验室主要分布在2楼和3楼，办公室主要在3楼"],
+["数学与统计学院楼","zhe_li_lou"],
+["数院","zhe_li_lou"],
+["信息学院楼","信息学院位于哲理楼，实验室主要分布在2楼和3楼，办公室主要在3楼"],
+["信院","信息学院位于哲理楼，实验室主要分布在2楼和3楼，办公室主要在3楼"],
+
+["校部","校部位于正门北部"],
+["机关楼","机关楼（校部）位于正门北部"],
+["溯源楼","su_yuan_lou"],
+["环境学院实验中心","su_yuan_lou"],
+["生命科学院","su_yuan_lou"],
+["生命科学院楼","su_yuan_lou"],
+["生命学院","su_yuan_lou"],
+
+["树蕙亭","shu_hui_ting"],
+["篮球场","lan_qiu_chang"],
+["大篮球场","lan_qiu_chang"],
+["轻产实训中心","qing_chan_shi_xun_zhong_xin"],
+["轻型产业学院实训中心","qing_chan_shi_xun_zhong_xin"],
+["心理测试实验室","xin_li_ce_shi_shi_yan_shi"],
+["心理测试与行为分析","xin_li_ce_shi_shi_yan_shi"],
+["心理测试与行为分析重点实验室","xin_li_ce_shi_shi_yan_shi"],
+["理贤楼","li_xian_lou"],
+["理贤","li_xian_lou"],
+["物理学院楼","li_xian_lou"],
+["物院","li_xian_lou"],
+["物理学院","li_xian_lou"],
+["物院楼","li_xian_lou"],
+["快递站","kuai_di_zhong_xin"],
+["菜鸟驿站","kuai_di_zhong_xin"],
+["快递中心","kuai_di_zhong_xin"],
+["快递","kuai_di_zhong_xin"],
+["快递点","kuai_di_zhong_xin"],
+["取快递","kuai_di_zhong_xin"],
+["国际教育中心","guo_ji_jiao_yv_zhong_xin"],
+["国际教育","guo_ji_jiao_yv_zhong_xin"],
+["国教中心","guo_ji_jiao_yv_zhong_xin"],
+["研究生院","yan_jiu_sheng_yuan"],
+["博远楼","yan_jiu_sheng_yuan"],
+["操场","cao_chang"],
+["运动场","cao_chang"],
+["足球场","cao_chang"],
+["体育场","cao_chang"],
+["网球场","wang_qiu_chang"],
+["网球","wang_qiu_chang"],
+["百果超市","bgcs"],
+["浴池","bgcs"],
+["校园卡中心","bgcs"],
+["太平洋咖啡","bgcs"],
+["沪上阿姨","bgcs"],
+["水果店","bgcs"],
+["复印","bgcs"],
+["澡堂子","bgcs"],
+["澡堂","bgcs"],
+["健身中心","jian_shen_zhong_xin"],
+["健身房","jian_shen_zhong_xin"],
+["斯巴达健身中心","jian_shen_zhong_xin"],
+["斯巴达","jian_shen_zhong_xin"],
+["桃李园食堂","tao_li_yuan"],
+["桃李园","tao_li_yuan"],
+["一食堂","tao_li_yuan"],
+["1食堂","tao_li_yuan"],
+["二食堂","tao_li_yuan"],
+["2食堂","tao_li_yuan"],
+["公共基础学院","hui_xing"],
+["杏坛咖啡","xing_tan_ka_fei"],
+["变电所","pei_dian_shi"],
+
+["杏坛","xing_tan_ka_fei"],
+["体育馆","ti_yv_guan"],
+["乒乓球馆","ti_yv_guan"],
+["排球场","pai_qiu_chang"],
+["排球","pai_qiu_chang"],
+["乒乓球","ti_yv_guan"],
+["马克思主义学院","ma_yuan_lou"],
+["马院","ma_yuan_lou"],
+["马克思主义学院楼","ma_yuan_lou"],
+["马院楼","ma_yuan_lou"],
+["学府九号","xue_fu_jiu_hao"],
+["学府9号","xue_fu_jiu_hao"],
+["后勤","hou_qin"],
+["后勤发展集团","hou_qin"],
+["校医院","xiao_yi_yuan"],
+["医院","xiao_yi_yuan"],
+["小篮球场","xiao_lan_qiu_chang"],
+["清真食堂","qing_zhen_shi_tang"],
+["三食堂","san_shi_tang"],
+["3食堂","san_shi_tang"],
+["四食堂","si_shi_tang"],
+["4食堂","si_shi_tang"],
+["三四食堂","san_shi_tang"],
+["大学生活动中心","da_xue_sheng_huo_dong_zhong_xin"],
+["活动中心","da_xue_sheng_huo_dong_zhong_xin"],
+["大活","da_xue_sheng_huo_dong_zhong_xin"],
+["交电费","jiao_dian_fei"],
+["电费缴纳","jiao_dian_fei"],
+["电费","jiao_dian_fei"],
+["打印店","da_yin_dian"],
+["印刷厂","da_yin_dian"],
+["五洲园","li_an_min_yan_jiu_yuan"],
+["五洲园宾馆","li_an_min_yan_jiu_yuan"],
+["经济研究院","li_an_min_yan_jiu_yuan"],
+["李安民经济研究院","li_an_min_yan_jiu_yuan"],
+["正门","zheng_men"],
+["东南门","dong_nan_men"],
+["南门","zheng_men"],
+["树蕙亭","shu_hui_ting"],
+["图书馆","tu_shu_guan"],
+["阅览室","tu_shu_guan"]
 ]);
 
 
@@ -942,9 +1227,9 @@ const locMap=new Map(
 			stri=stri.replace(' ', '');
 			console.log('搜索：'+stri);
 			var loctId=locMap.get(stri);
-console.log('ID:'+loctId);
-			var tempKey='搜索：'+stri+'  ID:'+loctId;
-			document.getElementById("temp").value=tempKey;
+console.log(stri+' ID:'+loctId);
+			var tempKey=locHelpMap.get(stri);
+			document.getElementById("locHelp").innerHTML=tempKey;
 			var classnm="cssICON_"+loctId;
 			var pic= (document.getElementsByClassName(classnm))[0];
 			//pic.style.transition = "5s";
@@ -1025,7 +1310,7 @@ console.log('ID:'+loctId);
 	  <div class="cssICON_da_li_tang" onclick="LocID='da_li_tang';imgNum=4;showWind('大礼堂','崇山校区大礼堂位于怀远楼北面，修建于80年代中期，于2008年修缮。现用作文艺演出等活动场地。','da_li_tang',4)"><img src="images/icon/da_li_tang.png" width="86"  /></div>	
 	  <div class="cssICON_dong_jie_ti" onclick="LocID='dong_jie_ti';imgNum=3;showWind('东阶梯教学楼','东阶梯教学楼位于蕙星楼西侧，为3层阶梯教室楼，每层有两间不同规格的阶梯教室。东阶梯和西阶梯教学楼外观相似，分布在哲理楼后侧的两端。','dong_jie_ti',3)"><img src="images/icon/dong_jie_ti.png" width="43"  /></div>	
 	  <div class="cssICON_xi_jie_ti" onclick="LocID='xi_jie_ti';imgNum=3;showWind('西阶梯教学楼','西阶梯教学楼位于哲理楼西北方向，银杏路旁，为3层阶梯教室楼，每层有两间不同规格的阶梯教室。东阶梯和西阶梯教学楼外观相似，分别位于哲理楼后侧的两端。','xi_jie_ti',3)"><img src="images/icon/xi_jie_ti.png" width="42"  /></div>	
-	  <div class="cssICON_huai_yuan_lou" onclick="LocID='huai_yuan_lou';imgNum=6;showWind('怀远楼','怀远楼正对着崇山校区东南门，1953年投入使用，为苏联风格建筑，立面风格类似于俄罗斯冬宫，原为沈阳俄文专科学校教学楼，现在为辽宁大学轻型产业学院和环境学院科研实验楼。','huai_yuan_lou',6)"><img src="images/icon/huai_yuan_lou.png" width="142.5"  /></div>	
+	  <div class="cssICON_huai_yuan_lou" onclick="LocID='huai_yuan_lou';imgNum=6;showWind('怀远楼','怀远楼正对着崇山校区东南门，1953年投入使用，为苏联风格建筑，立面风格类似于俄罗斯冬宫，原为沈阳俄文专科学校教学楼，现在为辽宁大学轻型产业学院，药学院和环境学院科研实验楼。','huai_yuan_lou',6)"><img src="images/icon/huai_yuan_lou.png" width="142.5"  /></div>	
 	  <div class="cssICON_ji_guan_lou" onclick="LocID='ji_guan_lou';imgNum=5;showWind('机关楼','机关楼建于1956年，正对着崇山校区正门，原为辽宁大学图书馆，现作为辽宁大学崇山校区校部办公楼。','ji_guan_lou',5)"><img src="images/icon/ji_guan_lou.png" width="151"  /></div>		
 	  <div class="cssICON_ji_jiao" onclick="LocID='ji_jiao';imgNum=3;showWind('继续教育学院','辽宁大学继续教育学院楼。','ji_jiao',3)"><img src="images/icon/ji_jiao.png" width="24.5"  /></div>	
 	  <div class="cssICON_kuai_di_zhong_xin" onclick="LocID='kuai_di_zhong_xin';imgNum=2;showWind('快递中心','崇山校区的快递中心，所有的快递都在这里取，这里也可以邮寄快递。','kuai_di_zhong_xin',2)"><img src="images/icon/kuai_di_zhong_xin.png" width="134"  /></div>	
@@ -1042,63 +1327,64 @@ console.log('ID:'+loctId);
 	  <div class="cssICON_xi_san_yuan_su" onclick="LocID='xi_san_yuan_su';imgNum=2;showWind('辽宁大学稀散元素','辽宁大学稀散化学元素存放地。','xi_san_yuan_su',2)"><img src="images/icon/xi_san_yuan_su.png" width="27"  /></div>	
 	  <div class="cssICON_xin_li_ce_shi_shi_yan_shi" onclick="LocID='xin_li_ce_shi_shi_yan_shi';imgNum=2;showWind('心理测试与行为分析重点实验室','辽宁省科学技术厅在辽宁大学开设的辽宁省心理测试与行为分析实验室，原址为友园食堂，2022年改建为心理测试实验室。','xin_li_ce_shi_shi_yan_shi',2)"><img src="images/icon/xin_li_ce_shi_shi_yan_shi.png" width="90"  /></div>	
 	  <div class="cssICON_zai_jian" onclick="LocID='zai_jian';imgNum=3;showWind('创新实践教学中心（在建）','辽宁大学创新实践教学中心（在建）。','zai_jian',3)"><img src="images/icon/zai_jian.png" width="129.5"  /></div>	
-	  <div class="cssICON_zhe_li_lou" onclick="LocID='zhe_li_lou';imgNum=11;showWind('哲理楼','哲理楼，原名哲经楼，位于崇山校区南部，为欧洲风格的楼房，1952年底投入使用。哲理楼一楼中厅放置一尊马克思塑像。现为辽宁大学信息学院和数学与统计学院的科研办公楼。','zhe_li_lou',11)"><img src="images/icon/zhe_li_lou.png" width="244"  /></div>	
+	  <div class="cssICON_zhe_li_lou" onclick="LocID='zhe_li_lou';imgNum=11;showWind('哲理楼','哲理楼，原名哲经楼，位于崇山校区南部，为欧洲风格的楼房，1952年底投入使用。哲理楼一楼中厅放置一尊马克思塑像。现为辽宁大学信息学院和数学与统计学院的科研办公楼。哲理楼南门不经常开放，需要从北门（后门）进入。&nbsp;<br><br>信息学院官网：https://sist.lnu.edu.cn/<br>数学与统计学院官网：https://ms.lnu.edu.cn/xygk/xyjj.htm','zhe_li_lou',11)"><img src="images/icon/zhe_li_lou.png" width="244"  /></div>	
+		
+		
+		
+		
+
+	  <div class="cssICON_jian_shen_zhong_xin" onclick="LocID='jian_shen_zhong_xin';imgNum=3;showWind('斯巴达健身中心','，','jian_shen_zhong_xin',3)"><img src="images/icon/jian_shen_zhong_xin.png" width="32"  /></div>	
+	  <div class="cssICON_8_she" onclick="LocID='8_she';imgNum=3;showWind('学生宿舍八舍','，','8_she',3)"><img src="images/icon/8_she.png" width="121"  /></div>	
+	  <div class="cssICON_9_she" onclick="LocID='9_she';imgNum=3;showWind('学生宿舍九舍','，','9_she',3)"><img src="images/icon/9_she.png" width="112.2"  /></div>	
+	  <div class="cssICON_10_she" onclick="LocID='10_she';imgNum=3;showWind('学生宿舍十舍','，','10_she',3)"><img src="images/icon/10_she.png" width="38.3"  /></div>	
+	  <div class="cssICON_1_she" onclick="LocID='1_she';imgNum=3;showWind('学生宿舍一舍','，','1_she',3)"><img src="images/icon/1_she.png" width="27.5"  /></div>	
+	  <div class="cssICON_3_she" onclick="LocID='3_she';imgNum=3;showWind('学生宿舍三舍','，','3_she',3)"><img src="images/icon/3_she.png" width="88.5"  /></div>	
+	  <div class="cssICON_4_she" onclick="LocID='4_she';imgNum=3;showWind('学生宿舍四舍','，','4_she',3)"><img src="images/icon/4_she.png" width="64.5"  /></div>		
+	  <div class="cssICON_5_she" onclick="LocID='5_she';imgNum=3;showWind('学生宿舍五舍','，','5_she',3)"><img src="images/icon/5_she.png" width="65"  /></div>		
+	  <div class="cssICON_16_she" onclick="LocID='16_she';imgNum=3;showWind('学生宿舍16舍','，','16_she',3)"><img src="images/icon/16_she.png" width="35.5"  /></div>	
+		
+		
+	  <div class="cssICON_xiao_lan_qiu_chang" onclick="LocID='xiao_lan_qiu_chang';imgNum=3;showWind('小篮球场','，','xiao_lan_qiu_chang',3)"><img src="images/icon/xiao_lan_qiu_chang.png" width="61.2"  /></div>	
+	  <div class="cssICON_xiao_yi_yuan" onclick="LocID='xiao_yi_yuan';imgNum=3;showWind('校医院','，','xiao_yi_yuan',3)"><img src="images/icon/xiao_yi_yuan.png" width="51.5"  /></div>	
+	  <div class="cssICON_bo_shi_lou" onclick="LocID='bo_shi_lou';imgNum=3;showWind('博士楼','，','bo_shi_lou',3)"><img src="images/icon/bo_shi_lou.png" width="65"  /></div>	
 		
 		
 		
 		
 		
-		
-	  <div class="cssICON_jian_shen_zhong_xin" onclick="LocID='jian_shen_zhong_xin';imgNum=3;showWind('哲理楼','哲理楼，原名哲经楼，位于崇山校区南部，为欧洲风格的楼房，1952年底投入使用。哲理楼一楼中厅放置一尊马克思塑像。现为辽宁大学信息学院和数学与统计学院的科研办公楼。','jian_shen_zhong_xin',3)"><img src="images/icon/jian_shen_zhong_xin.png" width="32"  /></div>	
-	  <div class="cssICON_8_she" onclick="LocID='8_she';imgNum=3;showWind('哲理楼','哲理楼，原名哲经楼，位于崇山校区南部，为欧洲风格的楼房，1952年底投入使用。哲理楼一楼中厅放置一尊马克思塑像。现为辽宁大学信息学院和数学与统计学院的科研办公楼。','8_she',3)"><img src="images/icon/8_she.png" width="121"  /></div>	
-	  <div class="cssICON_9_she" onclick="LocID='9_she';imgNum=3;showWind('哲理楼','哲理楼，原名哲经楼，位于崇山校区南部，为欧洲风格的楼房，1952年底投入使用。哲理楼一楼中厅放置一尊马克思塑像。现为辽宁大学信息学院和数学与统计学院的科研办公楼。','9_she',3)"><img src="images/icon/9_she.png" width="112.2"  /></div>	
-	  <div class="cssICON_10_she" onclick="LocID='10_she';imgNum=3;showWind('哲理楼','哲理楼，原名哲经楼，位于崇山校区南部，为欧洲风格的楼房，1952年底投入使用。哲理楼一楼中厅放置一尊马克思塑像。现为辽宁大学信息学院和数学与统计学院的科研办公楼。','10_she',3)"><img src="images/icon/10_she.png" width="38.3"  /></div>	
-	  <div class="cssICON_1_she" onclick="LocID='1_she';imgNum=3;showWind('哲理楼','哲理楼，原名哲经楼，位于崇山校区南部，为欧洲风格的楼房，1952年底投入使用。哲理楼一楼中厅放置一尊马克思塑像。现为辽宁大学信息学院和数学与统计学院的科研办公楼。','1_she',3)"><img src="images/icon/1_she.png" width="27.5"  /></div>	
-	  <div class="cssICON_3_she" onclick="LocID='3_she';imgNum=3;showWind('哲理楼','哲理楼，原名哲经楼，位于崇山校区南部，为欧洲风格的楼房，1952年底投入使用。哲理楼一楼中厅放置一尊马克思塑像。现为辽宁大学信息学院和数学与统计学院的科研办公楼。','3_she',3)"><img src="images/icon/3_she.png" width="88.5"  /></div>	
-	  <div class="cssICON_4_she" onclick="LocID='4_she';imgNum=3;showWind('哲理楼','哲理楼，原名哲经楼，位于崇山校区南部，为欧洲风格的楼房，1952年底投入使用。哲理楼一楼中厅放置一尊马克思塑像。现为辽宁大学信息学院和数学与统计学院的科研办公楼。','4_she',3)"><img src="images/icon/4_she.png" width="64.5"  /></div>		
-	  <div class="cssICON_5_she" onclick="LocID='5_she';imgNum=3;showWind('哲理楼','哲理楼，原名哲经楼，位于崇山校区南部，为欧洲风格的楼房，1952年底投入使用。哲理楼一楼中厅放置一尊马克思塑像。现为辽宁大学信息学院和数学与统计学院的科研办公楼。','5_she',3)"><img src="images/icon/5_she.png" width="65"  /></div>		
-	  <div class="cssICON_16_she" onclick="LocID='16_she';imgNum=3;showWind('哲理楼','哲理楼，原名哲经楼，位于崇山校区南部，为欧洲风格的楼房，1952年底投入使用。哲理楼一楼中厅放置一尊马克思塑像。现为辽宁大学信息学院和数学与统计学院的科研办公楼。','16_she',3)"><img src="images/icon/16_she.png" width="35.5"  /></div>	
-		
-		
-	  <div class="cssICON_xiao_lan_qiu_chang" onclick="LocID='xiao_lan_qiu_chang';imgNum=3;showWind('哲理楼','哲理楼，原名哲经楼，位于崇山校区南部，为欧洲风格的楼房，1952年底投入使用。哲理楼一楼中厅放置一尊马克思塑像。现为辽宁大学信息学院和数学与统计学院的科研办公楼。','xiao_lan_qiu_chang',3)"><img src="images/icon/xiao_lan_qiu_chang.png" width="61.2"  /></div>	
-	  <div class="cssICON_xiao_yi_yuan" onclick="LocID='xiao_yi_yuan';imgNum=3;showWind('哲理楼','哲理楼，原名哲经楼，位于崇山校区南部，为欧洲风格的楼房，1952年底投入使用。哲理楼一楼中厅放置一尊马克思塑像。现为辽宁大学信息学院和数学与统计学院的科研办公楼。','xiao_yi_yuan',3)"><img src="images/icon/xiao_yi_yuan.png" width="51.5"  /></div>	
-	  <div class="cssICON_bo_shi_lou" onclick="LocID='bo_shi_lou';imgNum=3;showWind('哲理楼','哲理楼，原名哲经楼，位于崇山校区南部，为欧洲风格的楼房，1952年底投入使用。哲理楼一楼中厅放置一尊马克思塑像。现为辽宁大学信息学院和数学与统计学院的科研办公楼。','bo_shi_lou',3)"><img src="images/icon/bo_shi_lou.png" width="65"  /></div>	
+	  <div class="cssICON_da_xue_sheng_huo_dong_zhong_xin" onclick="LocID='da_xue_sheng_huo_dong_zhong_xin';imgNum=3;showWind('大学生活动中心','，','da_xue_sheng_huo_dong_zhong_xin',3)"><img src="images/icon/da_xue_sheng_huo_dong_zhong_xin.png" width="67"  /></div>	
+	  <div class="cssICON_san_shi_tang" onclick="LocID='san_shi_tang';imgNum=3;showWind('三食堂','，','san_shi_tang',3)"><img src="images/icon/san_shi_tang.png" width="29.5"  /></div>	
+	  <div class="cssICON_si_shi_tang" onclick="LocID='si_shi_tang';imgNum=3;showWind('四食堂','，','si_shi_tang',3)"><img src="images/icon/si_shi_tang.png" width="29.5"  /></div>	
+	  <div class="cssICON_qing_zhen_shi_tang" onclick="LocID='qing_zhen_shi_tang';imgNum=3;showWind('清真食堂','，','qing_zhen_shi_tang',3)"><img src="images/icon/qing_zhen_shi_tang.png" width="43"  /></div>	
+	  <div class="cssICON_xue_fu_jiu_hao" onclick="LocID='xue_fu_jiu_hao';imgNum=3;showWind('学府九号','，','xue_fu_jiu_hao',3)"><img src="images/icon/xue_fu_jiu_hao.png" width="21"  /></div>	
+	  <div class="cssICON_fa_shuo_gong_yv" onclick="LocID='fa_shuo_gong_yv';imgNum=3;showWind('法硕公寓','，','fa_shuo_gong_yv',3)"><img src="images/icon/fa_shuo_gong_yv.png" width="88"  /></div>	
+	  <div class="cssICON_ma_yuan_lou" onclick="LocID='ma_yuan_lou';imgNum=3;showWind('马克思主义学院','，','ma_yuan_lou',3)"><img src="images/icon/ma_yuan_lou.png" width="50"  /></div>
 		
 		
 		
 		
-		
-	  <div class="cssICON_da_xue_sheng_huo_dong_zhong_xin" onclick="LocID='da_xue_sheng_huo_dong_zhong_xin';imgNum=3;showWind('哲理楼','哲理楼，原名哲经楼，位于崇山校区南部，为欧洲风格的楼房，1952年底投入使用。哲理楼一楼中厅放置一尊马克思塑像。现为辽宁大学信息学院和数学与统计学院的科研办公楼。','da_xue_sheng_huo_dong_zhong_xin',3)"><img src="images/icon/da_xue_sheng_huo_dong_zhong_xin.png" width="67"  /></div>	
-	  <div class="cssICON_san_shi_tang" onclick="LocID='san_shi_tang';imgNum=3;showWind('哲理楼','哲理楼，原名哲经楼，位于崇山校区南部，为欧洲风格的楼房，1952年底投入使用。哲理楼一楼中厅放置一尊马克思塑像。现为辽宁大学信息学院和数学与统计学院的科研办公楼。','san_shi_tang',3)"><img src="images/icon/san_shi_tang.png" width="29.5"  /></div>	
-	  <div class="cssICON_si_shi_tang" onclick="LocID='si_shi_tang';imgNum=3;showWind('哲理楼','哲理楼，原名哲经楼，位于崇山校区南部，为欧洲风格的楼房，1952年底投入使用。哲理楼一楼中厅放置一尊马克思塑像。现为辽宁大学信息学院和数学与统计学院的科研办公楼。','si_shi_tang',3)"><img src="images/icon/si_shi_tang.png" width="29.5"  /></div>	
-	  <div class="cssICON_qing_zhen_shi_tang" onclick="LocID='qing_zhen_shi_tang';imgNum=3;showWind('哲理楼','哲理楼，原名哲经楼，位于崇山校区南部，为欧洲风格的楼房，1952年底投入使用。哲理楼一楼中厅放置一尊马克思塑像。现为辽宁大学信息学院和数学与统计学院的科研办公楼。','qing_zhen_shi_tang',3)"><img src="images/icon/qing_zhen_shi_tang.png" width="43"  /></div>	
-	  <div class="cssICON_xue_fu_jiu_hao" onclick="LocID='xue_fu_jiu_hao';imgNum=3;showWind('哲理楼','哲理楼，原名哲经楼，位于崇山校区南部，为欧洲风格的楼房，1952年底投入使用。哲理楼一楼中厅放置一尊马克思塑像。现为辽宁大学信息学院和数学与统计学院的科研办公楼。','xue_fu_jiu_hao',3)"><img src="images/icon/xue_fu_jiu_hao.png" width="21"  /></div>	
-	  <div class="cssICON_fa_shuo_gong_yv" onclick="LocID='fa_shuo_gong_yv';imgNum=3;showWind('哲理楼','哲理楼，原名哲经楼，位于崇山校区南部，为欧洲风格的楼房，1952年底投入使用。哲理楼一楼中厅放置一尊马克思塑像。现为辽宁大学信息学院和数学与统计学院的科研办公楼。','fa_shuo_gong_yv',3)"><img src="images/icon/fa_shuo_gong_yv.png" width="88"  /></div>	
-	  <div class="cssICON_ma_yuan_lou" onclick="LocID='ma_yuan_lou';imgNum=3;showWind('哲理楼','哲理楼，原名哲经楼，位于崇山校区南部，为欧洲风格的楼房，1952年底投入使用。哲理楼一楼中厅放置一尊马克思塑像。现为辽宁大学信息学院和数学与统计学院的科研办公楼。','ma_yuan_lou',3)"><img src="images/icon/ma_yuan_lou.png" width="50"  /></div>
-		
-		
-		
-		
-	  <div class="cssICON_hou_qin" onclick="LocID='hou_qin';imgNum=3;showWind('哲理楼','哲理楼，原名哲经楼，位于崇山校区南部，为欧洲风格的楼房，1952年底投入使用。哲理楼一楼中厅放置一尊马克思塑像。现为辽宁大学信息学院和数学与统计学院的科研办公楼。','hou_qin',3)"><img src="images/icon/hou_qin.png" width="46"  /></div>
-	  <div class="cssICON_li_an_min_yan_jiu_yuan" onclick="LocID='li_an_min_yan_jiu_yuan';imgNum=3;showWind('哲理楼','哲理楼，原名哲经楼，位于崇山校区南部，为欧洲风格的楼房，1952年底投入使用。哲理楼一楼中厅放置一尊马克思塑像。现为辽宁大学信息学院和数学与统计学院的科研办公楼。','li_an_min_yan_jiu_yuan',3)"><img src="images/icon/li_an_min_yan_jiu_yuan.png" width="21.5"  /></div>
-	  <div class="cssICON_yan_jiu_sheng_yuan" onclick="LocID='yan_jiu_sheng_yuan';imgNum=3;showWind('哲理楼','哲理楼，原名哲经楼，位于崇山校区南部，为欧洲风格的楼房，1952年底投入使用。哲理楼一楼中厅放置一尊马克思塑像。现为辽宁大学信息学院和数学与统计学院的科研办公楼。','yan_jiu_sheng_yuan',3)"><img src="images/icon/yan_jiu_sheng_yuan.png" width="76.4"  /></div>
-	  <div class="cssICON_guo_ji_jiao_yv_zhong_xin" onclick="LocID='guo_ji_jiao_yv_zhong_xin';imgNum=3;showWind('哲理楼','哲理楼，原名哲经楼，位于崇山校区南部，为欧洲风格的楼房，1952年底投入使用。哲理楼一楼中厅放置一尊马克思塑像。现为辽宁大学信息学院和数学与统计学院的科研办公楼。','guo_ji_jiao_yv_zhong_xin',3)"><img src="images/icon/guo_ji_jiao_yv_zhong_xin.png" width="92.5"  /></div>
-	  <div class="cssICON_cao_chang" onclick="LocID='cao_chang';imgNum=3;showWind('哲理楼','哲理楼，原名哲经楼，位于崇山校区南部，为欧洲风格的楼房，1952年底投入使用。哲理楼一楼中厅放置一尊马克思塑像。现为辽宁大学信息学院和数学与统计学院的科研办公楼。','cao_chang',3)"><img src="images/icon/cao_chang.png" width="248"  /></div>
-	  <div class="cssICON_ti_yv_guan" onclick="LocID='ti_yv_guan';imgNum=3;showWind('哲理楼','哲理楼，原名哲经楼，位于崇山校区南部，为欧洲风格的楼房，1952年底投入使用。哲理楼一楼中厅放置一尊马克思塑像。现为辽宁大学信息学院和数学与统计学院的科研办公楼。','ti_yv_guan',3)"><img src="images/icon/ti_yv_guan.png" width="53"  /></div>
-	  <div class="cssICON_han_lin_yuan" onclick="LocID='han_lin_yuan';imgNum=3;showWind('哲理楼','哲理楼，原名哲经楼，位于崇山校区南部，为欧洲风格的楼房，1952年底投入使用。哲理楼一楼中厅放置一尊马克思塑像。现为辽宁大学信息学院和数学与统计学院的科研办公楼。','han_lin_yuan',3)"><img src="images/icon/han_lin_yuan.png" width="29.5"  /></div>
-	  <div class="cssICON_15_she" onclick="LocID='15_she';imgNum=3;showWind('哲理楼','哲理楼，原名哲经楼，位于崇山校区南部，为欧洲风格的楼房，1952年底投入使用。哲理楼一楼中厅放置一尊马克思塑像。现为辽宁大学信息学院和数学与统计学院的科研办公楼。','15_she',3)"><img src="images/icon/15_she.png" width="36"  /></div>
-	  <div class="cssICON_zheng_men" onclick="LocID='zheng_men';imgNum=3;showWind('哲理楼','哲理楼，原名哲经楼，位于崇山校区南部，为欧洲风格的楼房，1952年底投入使用。哲理楼一楼中厅放置一尊马克思塑像。现为辽宁大学信息学院和数学与统计学院的科研办公楼。','zheng_men',3)"><img src="images/icon/zheng_men.png" width="55.3"  /></div>
-	  <div class="cssICON_dong_nan_men" onclick="LocID='dong_nan_men';imgNum=3;showWind('哲理楼','哲理楼，原名哲经楼，位于崇山校区南部，为欧洲风格的楼房，1952年底投入使用。哲理楼一楼中厅放置一尊马克思塑像。现为辽宁大学信息学院和数学与统计学院的科研办公楼。','dong_nan_men',3)"><img src="images/icon/dong_nan_men.png" width="54.5"  /></div>
+	  <div class="cssICON_hou_qin" onclick="LocID='hou_qin';imgNum=3;showWind('后勤发展集团','，','hou_qin',3)"><img src="images/icon/hou_qin.png" width="46"  /></div>
+	  <div class="cssICON_li_an_min_yan_jiu_yuan" onclick="LocID='li_an_min_yan_jiu_yuan';imgNum=3;showWind('李安民经济研究院','，','li_an_min_yan_jiu_yuan',3)"><img src="images/icon/li_an_min_yan_jiu_yuan.png" width="21.5"  /></div>
+	  <div class="cssICON_yan_jiu_sheng_yuan" onclick="LocID='yan_jiu_sheng_yuan';imgNum=3;showWind('博远楼','，','yan_jiu_sheng_yuan',3)"><img src="images/icon/yan_jiu_sheng_yuan.png" width="76.4"  /></div>
+	  <div class="cssICON_guo_ji_jiao_yv_zhong_xin" onclick="LocID='guo_ji_jiao_yv_zhong_xin';imgNum=3;showWind('国际教育学院','，','guo_ji_jiao_yv_zhong_xin',3)"><img src="images/icon/guo_ji_jiao_yv_zhong_xin.png" width="92.5"  /></div>
+	  <div class="cssICON_cao_chang" onclick="LocID='cao_chang';imgNum=3;showWind('操场','，','cao_chang',3)"><img src="images/icon/cao_chang.png" width="248"  /></div>
+	  <div class="cssICON_ti_yv_guan" onclick="LocID='ti_yv_guan';imgNum=3;showWind('体育馆','，','ti_yv_guan',3)"><img src="images/icon/ti_yv_guan.png" width="53"  /></div>
+	  <div class="cssICON_han_lin_yuan" onclick="LocID='han_lin_yuan';imgNum=3;showWind('翰林园公寓','，','han_lin_yuan',3)"><img src="images/icon/han_lin_yuan.png" width="29.5"  /></div>
+	  <div class="cssICON_15_she" onclick="LocID='15_she';imgNum=3;showWind('学生宿舍15舍','，','15_she',3)"><img src="images/icon/15_she.png" width="36"  /></div>
+	  <div class="cssICON_zheng_men" onclick="LocID='zheng_men';imgNum=3;showWind('正门','，','zheng_men',3)"><img src="images/icon/zheng_men.png" width="55.3"  /></div>
+	  <div class="cssICON_dong_nan_men" onclick="LocID='dong_nan_men';imgNum=3;showWind('东南门','，','dong_nan_men',3)"><img src="images/icon/dong_nan_men.png" width="54.5"  /></div>
 		
 		
 		
 		
-	  <div class="cssICON_pai_qiu_chang" onclick="LocID='pai_qiu_chang';imgNum=3;showWind('哲理楼','哲理楼，原名哲经楼，位于崇山校区南部，为欧洲风格的楼房，1952年底投入使用。哲理楼一楼中厅放置一尊马克思塑像。现为辽宁大学信息学院和数学与统计学院的科研办公楼。','pai_qiu_chang',3)"><img src="images/icon/pai_qiu_chang.png" width="53"  /></div>
-	  <div class="cssICON_wang_qiu_chang" onclick="LocID='wang_qiu_chang';imgNum=3;showWind('哲理楼','哲理楼，原名哲经楼，位于崇山校区南部，为欧洲风格的楼房，1952年底投入使用。哲理楼一楼中厅放置一尊马克思塑像。现为辽宁大学信息学院和数学与统计学院的科研办公楼。','wang_qiu_chang',3)"><img src="images/icon/wang_qiu_chang.png" width="189.4"  /></div>
-	  <div class="cssICON_xing_tan_ka_fei" onclick="LocID='xing_tan_ka_fei';imgNum=3;showWind('哲理楼','哲理楼，原名哲经楼，位于崇山校区南部，为欧洲风格的楼房，1952年底投入使用。哲理楼一楼中厅放置一尊马克思塑像。现为辽宁大学信息学院和数学与统计学院的科研办公楼。','xing_tan_ka_fei',3)"><img src="images/icon/xing_tan_ka_fei.png" width="31"  /></div>
-	  <div class="cssICON_pei_dian_shi" onclick="LocID='pei_dian_shi';imgNum=3;showWind('哲理楼','哲理楼，原名哲经楼，位于崇山校区南部，为欧洲风格的楼房，1952年底投入使用。哲理楼一楼中厅放置一尊马克思塑像。现为辽宁大学信息学院和数学与统计学院的科研办公楼。','pei_dian_shi',3)"><img src="images/icon/pei_dian_shi.png" width="28"  /></div>
-	  <div class="cssICON_jiao_dian_fei" onclick="LocID='jiao_dian_fei';imgNum=3;showWind('哲理楼','哲理楼，原名哲经楼，位于崇山校区南部，为欧洲风格的楼房，1952年底投入使用。哲理楼一楼中厅放置一尊马克思塑像。现为辽宁大学信息学院和数学与统计学院的科研办公楼。','jiao_dian_fei',3)"><img src="images/icon/jiao_dian_fei.png" width="47"  /></div>
-	  <div class="cssICON_da_yin_dian" onclick="LocID='da_yin_dian';imgNum=3;showWind('哲理楼','哲理楼，原名哲经楼，位于崇山校区南部，为欧洲风格的楼房，1952年底投入使用。哲理楼一楼中厅放置一尊马克思塑像。现为辽宁大学信息学院和数学与统计学院的科研办公楼。','da_yin_dian',3)"><img src="images/icon/da_yin_dian.png" width="46.5"  /></div>
+	  <div class="cssICON_pai_qiu_chang" onclick="LocID='pai_qiu_chang';imgNum=3;showWind('排球场','，','pai_qiu_chang',3)"><img src="images/icon/pai_qiu_chang.png" width="53"  /></div>
+	  <div class="cssICON_wang_qiu_chang" onclick="LocID='wang_qiu_chang';imgNum=3;showWind('网球场','，','wang_qiu_chang',3)"><img src="images/icon/wang_qiu_chang.png" width="189.4"  /></div>
+	  <div class="cssICON_xing_tan_ka_fei" onclick="LocID='xing_tan_ka_fei';imgNum=3;showWind('杏坛咖啡','，','xing_tan_ka_fei',3)"><img src="images/icon/xing_tan_ka_fei.png" width="31"  /></div>
+	  <div class="cssICON_pei_dian_shi" onclick="LocID='pei_dian_shi';imgNum=3;showWind('变电所','，','pei_dian_shi',3)"><img src="images/icon/pei_dian_shi.png" width="28"  /></div>
+	  <div class="cssICON_jiao_dian_fei" onclick="LocID='jiao_dian_fei';imgNum=3;showWind('电费缴纳处','，','jiao_dian_fei',3)"><img src="images/icon/jiao_dian_fei.png" width="47"  /></div>
+	  <div class="cssICON_da_yin_dian" onclick="LocID='da_yin_dian';imgNum=3;showWind('打印店（印刷厂）','，','da_yin_dian',3)"><img src="images/icon/da_yin_dian.png" width="46.5"  /></div>
+		
+
 		
 		
 		
@@ -1125,9 +1411,9 @@ console.log('ID:'+loctId);
 <div id="menu11" class="menu1">
 	  <img src="images/menu1.png" width="560" alt=""/>
 		<div id="app" class= "menu_page_1">
-			输入地点：<input id="search_input" type="text" v-model='search' value=" " onClick="showDownMenu2();showDownMenu();"/>
+			输入地点：<input id="search_input" type="text" v-model='search' value=" " onClick="showDownMenu();"/>
 		&nbsp;
-		<button onclick="search();closeDownMenu()">搜索</button><br>开发中，此处为指南帮助信息。地点搜索功能已实装。<br>搜索结果回显：<input id="temp" style="width=240px;"/>
+		<button onclick="search();closeDownMenu()">搜索</button><hr>搜索结果：<br><div id="locHelp" style="width:95%">此处显示地点指南信息。</div>
 
 
 
@@ -1145,7 +1431,7 @@ console.log('ID:'+loctId);
 	<div id="menu22" class="menu2">
 	  <img src="images/menu2.png" width="560" alt=""/> 
 		<div class= "menu_page_2">
-			开发中...<button>交电费</button><button>取快递</button><button>订水</button><button>校园卡</button><button>校园网</button>
+			生活指南开发中...<button>交电费</button><button>取快递</button><button>订水</button><button>校园卡</button><button>校园网</button>
 		</div>	
 	</div><div id="menu33" class="menu3">
 	  <img src="images/menu3.png" width="560" alt=""/> 
@@ -1156,7 +1442,7 @@ console.log('ID:'+loctId);
 	<div class="menu_title_1" onClick="showMenu1();">
 	  <div style="position: absolute; left: 14px; top: 10px;">搜索地点</div> </div>
 	<div class="menu_title_2" onClick="showMenu2();closeDownMenu()">
-	  <div style="position: absolute;left: 17px; top:10px;"> 生活指南</div> </div>
+	  <div style="position: absolute;left: 17px; top:10px;"> 开发中</div> </div>
 	<div class="menu_title_3" onClick="showMenu3();closeDownMenu()">
 	  <div style="position: absolute;left: 17px; top:10px;">&nbsp;&nbsp; 关&nbsp; 于 </div> </div>
 	
@@ -1166,92 +1452,227 @@ console.log('ID:'+loctId);
 var vm=new Vue({
 el:"#app",
 data:{
-search:' ',
+search:'',
 products: [
         {
-          "name":' 图书馆'
+          "name":'溯源楼 '
         },
         {
-          "name":' 东阶梯'
+          "name":'哲理楼 '
         },
         {
-          "name":' 东配楼'
+          "name":'怀远楼 '
         },
         {
-          "name":' 蕙星楼'
+          "name":'机关楼 '
         },
         {
-          "name":' 哲理楼'
+          "name":'明微楼 '
         },
         {
-          "name":' 西阶梯'
+          "name":'正门 '
         },
         {
-          "name":' 机关楼'
+          "name":'东南门 '
         },
         {
-          "name":' 怀远楼'
+          "name":'图书馆 '
         },
         {
-          "name":' 明微楼'
+          "name":'西阶梯 '
         },
         {
-          "name":' 溯源楼'
+          "name":'东阶梯 '
         },
         {
-          "name":' 理贤楼'
+          "name":'蕙星楼 '
         },
         {
-          "name":' 博士楼'
+          "name":'东配楼 '
         },
         {
-          "name":' 法硕公寓'
+          "name":'大礼堂 '
         },
         {
-          "name":' 翰林园'
+          "name":'稀散元素 '
         },
         {
-          "name":' 留学生公寓'
+          "name":'创新实践教学中心 '
         },
         {
-          "name":' 化学院'
+          "name":'继续教育学院 '
         },
         {
-          "name":' 物理学院'
+          "name":'十六舍 '
         },
         {
-          "name":' 数学院'
+          "name":'网球场 '
         },
         {
-          "name":' 信息学院'
+          "name":'变电所 '
         },
         {
-          "name":' 生命科学院'
+          "name":'杏坛咖啡 '
         },
         {
-          "name":' 轻型产业学院'
+          "name":'十五舍 '
         },
         {
-          "name":' 数学与统计学院'
+          "name":'操场 '
         },
         {
-          "name":' 轻产学院'
+          "name":'体育馆 '
         },
         {
-          "name":' 环境学院'
+          "name":'排球场 '
         },
         {
-          "name":' 大篮球场'
+          "name":'翰林园 '
         },
         {
-          "name":' 树蕙亭'
+          "name":'交电费 '
         },
         {
-          "name":' 辽大出版社' 
+          "name":'打印店 '
+        },
+        {
+          "name":'大篮球场 '
+        },
+        {
+          "name":'轻产实训中心 '
+        },
+        {
+          "name":'心理测试实验室 '
+        },
+        {
+          "name":'留学生宿舍 '
+        },
+        {
+          "name":'快递中心 '
+        },
+        {
+          "name":'国际教育中心 '
+        },
+        {
+          "name":'研究生院 '
+        },
+        {
+          "name":'李安民经济研究院 '
+        },
+        {
+          "name":'马克思主义学院 '
+        },
+        {
+          "name":'法硕公寓 '
+        },
+        {
+          "name":'后勤发展集团 '
+        },
+        {
+          "name":'学府九号 '
+        },
+        {
+          "name":'三食堂 '
+        },
+        {
+          "name":'清真食堂 '
+        },
+        {
+          "name":'四食堂 '
+        },
+        {
+          "name":'大学生活动中心 '
+        },
+        {
+          "name":'理贤楼 '
+        },
+        {
+          "name":'一舍 '
+        },
+        {
+          "name":'二舍 '
+        },
+        {
+          "name":'三舍 '
+        },
+        {
+          "name":'四舍 '
+        },
+        {
+          "name":'五舍 '
+        },
+        {
+          "name":'六舍 '
+        },
+        {
+          "name":'七舍 '
+        },
+        {
+          "name":'八舍 '
+        },
+        {
+          "name":'九舍 '
+        },
+        {
+          "name":'十舍 '
+        },
+        {
+          "name":'博士楼 '
+        },
+        {
+          "name":'健身中心 '
+        },
+        {
+          "name":'百果超市 '
+        },
+        {
+          "name":'浴池 '
+        },
+        {
+          "name":'桃李园食堂 '
+        },
+        {
+          "name":'校医院 '
+        },
+        {
+          "name":'小篮球场 '
+        },
+        {
+          "name":'生命科学院 '
+        },
+        {
+          "name":'信息学院 '
+        },
+        {
+          "name":'数学与统计学院 '
+        },
+        {
+          "name":'博远楼 '
+        },
+        {
+          "name":'轻型产业学院 '
+        },
+        {
+          "name":'药学院 '
+        },
+        {
+          "name":'环境学院 '
+        },
+        {
+          "name":'化学院 '
+        },
+        {
+          "name":'物理学院 '
+        },
+        {
+          "name":'公共基础学院 '
+        },
+        {
+          "name":'辽大出版社 ' 
         }
       ]},
 computed:
-{//脚本的标签放在body最后面；录入列表中的name值时在字符串后面加一个空格
+{//脚本的标签放在body最后面；录入列表中的name值时在字符串前面加一个空格
 	searchData:function(){
 var search=this.search;
 var searchVal="";//搜索后的数据
