@@ -521,6 +521,12 @@
     left: 304.7px;
     top: 668px;
     z-index: 3;
+	}.cssICON_dtz
+	{
+    position: absolute;
+    left: 99.7px;
+    top: 681px;
+    z-index: 3;
 	}.cssICON_dong_nan_men
 	{
     position: absolute;
@@ -551,7 +557,19 @@
     left: 452px;
     top: 503px;
     z-index: 3;
-	}.cssICON_da_yin_dian
+	}.cssICON_cszl
+	{
+    position: absolute;
+    left: 98px;
+    top: 693px;
+    z-index: 3;
+	}.cssICON_cjj
+	{
+    position: absolute;
+    left: 1199px;
+    top: 321px;
+    z-index: 3;
+}.cssICON_da_yin_dian
 	{
     position: absolute;
     left: 236.7px;
@@ -563,7 +581,7 @@
     left: 157.7px;
     top: 219px;
     z-index: 3;
-}
+	}
 	
 	
 	
@@ -618,7 +636,7 @@
 	.cssICON_Title
 	{
     position: absolute;
-    left: 1085px;
+    left: 685px;
     top: 8px;
     z-index: 2;
 	}
@@ -681,6 +699,8 @@
 		left: 10px;
 		top:50px;
 		width: 540px;
+		height: 137px;
+		overflow-y: scroll;
 	}
 	.menu_page_3
 	{
@@ -688,6 +708,8 @@
 		left: 10px;
 		top:50px;
 		width: 540px;
+		height: 137px;
+		overflow-y: scroll;
 	}
 	
 	
@@ -1093,7 +1115,7 @@ const locHelpMap=new Map(
 ["药学院","可点击图中地点查看图文信息。"],
 ["药院","可点击图中地点查看图文信息。"],
 ["药学院楼","可点击图中地点查看图文信息。"],
-["环境学院楼","可点击图中地点查看图文信息。],
+["环境学院楼","可点击图中地点查看图文信息。"],
 ["轻型产业学院楼","可点击图中地点查看图文信息。"],
 ["西配楼","西配楼为蕙星楼一部分，和东配楼相对，楼门平时不开，需要先进入蕙星楼通过走廊进入西配楼。"],
 
@@ -1310,7 +1332,7 @@ console.log(stri+' ID:'+loctId);
 		
 		</div>
 <img src="mapBack.png" width="1200"/>
-	  <div class="cssICON_Title"><img src="images/Title.png" width="400" alt=""/></div>
+	  <div class="cssICON_Title"><img src="images/Title.png" width="800" alt=""/><div style=" position: absolute;right: 9px;font-size: 10px;">v1.0 &nbsp; 2023年6月14日更新</div></div>
 	  <div class="cssICON_TL"><img src="images/tl.png" width="180" alt=""/></div>	
 		
 		
@@ -1404,6 +1426,10 @@ console.log(stri+' ID:'+loctId);
 	  <div class="cssICON_jiao_dian_fei" onclick="LocID='jiao_dian_fei';imgNum=1;showWind('售电处','在此缴纳宿舍的电费。需要带好售电卡，交完电费之后务必在当天在宿舍一楼宿管办公室刷卡。<br>23年6月8日售电处搬至斯巴达健身中心一楼。','jiao_dian_fei',1)"><img src="images/icon/jiao_dian_fei.png" width="47"  /></div>
 	  <div class="cssICON_da_yin_dian" onclick="LocID='da_yin_dian';imgNum=2;showWind('打印店（印刷厂）','崇山校区的印刷厂，在此购买实验报告纸，也可以在这里打印，打印质量较好。','da_yin_dian',2)"><img src="images/icon/da_yin_dian.png" width="46.5"  /></div>
 		
+	  <div class="cssICON_cszl" ><img src="images/icon/cszl.png" width="1111"  /></div>
+	  <div class="cssICON_cjj" ><img src="images/icon/cjj.png" width="35.2"  /></div>
+	  <div class="cssICON_dtz" ><img src="images/icon/dtz.png" width="60"  /></div>
+		
 
 		
 		
@@ -1451,18 +1477,19 @@ console.log(stri+' ID:'+loctId);
 	<div id="menu22" class="menu2">
 	  <img src="images/menu2.png" width="560" alt=""/> 
 		<div class= "menu_page_2">
-			生活指南开发中...<button>交电费</button><button>取快递</button><button>订水</button><button>校园卡</button><button>校园网</button>
+			1.此平面图为基于HTML5的网页版平面图，通过浏览器即可使用，并带有互动功能，提供更加丰富的信息。<br>2.点击地图中的建筑图块弹出图文信息窗口，点击图片切换按钮可以查看更多图片。<br>3.在地点搜索框中输入建筑名称或者院系，店铺等名称后，点击“搜索”按钮后在地图上会突出显示所查找的地点。</button>
 		</div>	
 	</div><div id="menu33" class="menu3">
 	  <img src="images/menu3.png" width="560" alt=""/> 
 		<div class= "menu_page_3">
-			此平面地图为HTML5互动地图，在平面地图的基础上增加了建筑信息，地点搜索等互动功能。<br>制作互动地图的想法早在一年前就有了，2022年6月曾计划制作Java版的辽大互动地图，但因为Java软件对运行环境有要求，可能不易于使用，最终没有落实。今年学习了WEB开发，借助HTML5灵活易用的特点，制作了这个更易于使用的互动地图。
+			  &nbsp; &nbsp;&nbsp; &nbsp; 此平面地图为信息学院20级学生自制的HTML5互动地图，在基于卫星地图绘制的几何图形平面地图的基础上增加了图文信息窗口，地点搜索等互动功能。<br> &nbsp; &nbsp; &nbsp;&nbsp; 制作互动地图的想法早在一年前就有了，2022年6月曾计划制作基于JavaFX的辽大互动地图，但因为Java软件对运行环境有一定要求，可能不易于使用，从而难以推广，最终没有落实。今年学习了WEB开发，于是借助HTML5灵活易用的特点以及JavaScript对运行环境的低要求，制作了这个更易于使用的HTML5互动地图。<br> &nbsp;&nbsp; &nbsp; &nbsp; 六月份先后两次，趁着天气晴朗拍摄了共计183张崇山校区各个建筑外景照片，用于地点图文信息的编写。所有代码，文案及美工等工作都由一人完成，从5月26日开始，耗时19天完成1.0版本，实现了地点图文信息查看以及模糊搜索功能。<br> &nbsp; &nbsp;&nbsp; &nbsp; 由于一个人经历有限，掌握的信息不算多，因此地图提供的信息不够完善，后续将在更新时补充更多更准确的信息。<br><br> &nbsp;&nbsp; &nbsp; &nbsp; ——Minecraft相思故  2023年6月14日
+			
 		</div>	
 	</div>
 	<div class="menu_title_1" onClick="showMenu1();">
 	  <div style="position: absolute; left: 14px; top: 10px;">搜索地点</div> </div>
 	<div class="menu_title_2" onClick="showMenu2();closeDownMenu()">
-	  <div style="position: absolute;left: 17px; top:10px;"> 开发中</div> </div>
+	  <div style="position: absolute;left: 17px; top:10px;"> 使用说明</div> </div>
 	<div class="menu_title_3" onClick="showMenu3();closeDownMenu()">
 	  <div style="position: absolute;left: 17px; top:10px;">&nbsp;&nbsp; 关&nbsp; 于 </div> </div>
 	
