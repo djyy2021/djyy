@@ -26,8 +26,8 @@
 	{
 		position: absolute;
 left:0px;top:0px;
-		width: 100%;
-		height: 100%;
+		width: 1550px;
+		height: 733px;
 		background:rgba(0,0,0,0.4) ;
 		z-index: 14;
 		visibility: hidden;
@@ -237,8 +237,8 @@ width:1502px;
 	.cssICON_ji_jiao
 	{
     position: absolute;
-    left: 1001px;
-    top: 470px;
+    left: 1003px;
+    top: 469.5px;
     z-index: 3;
 	}
 	.cssICON_kuai_di_zhong_xin
@@ -819,6 +819,26 @@ width:1502px;
 			wind.style.visibility="visible";
 			windBG.style.visibility="visible";
 		}
+	 
+		function showWind2(title,text,Locid,iN,url,urlName)
+		{
+			imgNum=0;
+			Loc=0;
+			imgNum=iN;
+			LocID=Locid;
+			//document.getElementById("search_input").value=' ';
+			var imgDiv=document.getElementById("ImageDiv");
+			var windBG=document.getElementById("winBG");
+			var wind=document.getElementById("infoWind");
+			var infoDiv=document.getElementById("InfoDiv");
+			var titleDiv=document.getElementById("TitleDiv");
+var ahref='<a href=\"'+url+'\">'+urlName+'</a>';
+			infoDiv.innerHTML=text+ahref;
+			titleDiv.innerHTML=title;
+			change(Loc,Locid);
+			wind.style.visibility="visible";
+			windBG.style.visibility="visible";
+		}
 		function closeWind()
 		{
 			loc=0;
@@ -1342,11 +1362,11 @@ console.log(stri+' ID:'+loctId);
 		
 		
 		
-	  <div class="cssICON_7_she" onclick="LocID='7_she';imgNum=3;showWind('七舍学生宿舍','七舍学生宿舍位于辽宁大学崇山校区西北角，男寝，本科生宿舍。基本配置：六人寝上床下桌,配备有阳台，无独立卫浴。','7_she',3)"><img src="images/icon/7_she.png" width="130" height="25" /></div>
+	  <div class="cssICON_7_she" onclick="LocID='7_she';imgNum=3;showWind2('七舍学生宿舍','七舍学生宿舍位于辽宁大学崇山校区西北角，男寝，本科生宿舍。基本配置：六人寝上床下桌,配备有阳台，无独立卫浴。<br>','7_she',3,'https://www.bilibili.com/video/BV1TW4y157zd','3D还原视频')"><img src="images/icon/7_she.png" width="130" height="25" /></div>
 	  <div class="cssICON_6_she" onclick="LocID='6_she';imgNum=3;showWind('六舍学生宿舍','六舍学生宿舍位于辽宁大学崇山校区西北部，男寝，本科生宿舍。基本配置：六人寝上床下桌,配备有阳台，无独立卫浴。','6_she',3)"><img src="images/icon/6_she.png" width="134" height="26" /></div>
-	  <div class="cssICON_hui_xing" onclick="LocID='hui_xing_lou';imgNum=14;showWind('蕙星楼','蕙星楼位于辽宁大学正南部，是一栋白色10层教学楼，为老校区最大的教学楼。英语课等一部分公共课以及一些通识课在此楼上课。一楼有化学实验室。2~8楼大部分教室没课时可以上自习，教室可以申请用来召开会议或开展社团活动。听力教室位于九楼。楼内配有两部电梯，楼后的小门平时开放到6：00，周末不开放小门。<br>蕙星楼开放时间：6：00--21：30','hui_xing_lou',14)"><img src="images/icon/hui_xing_lou.png" width="150"  /></div>
+	  <div class="cssICON_hui_xing" onclick="LocID='hui_xing_lou';imgNum=14;showWind('蕙星楼','蕙星楼位于辽宁大学正南部，是一栋白色10层教学楼，为老校区最大的教学楼。英语课等一部分公共课以及一些通识课在此楼上课。<br><br>1楼有化学实验室。<br>2~8楼大部分教室没课时可以上自习，教室可以申请用来召开会议或开展社团活动。<br>英语听力教室和公共基础学院位于9楼。<br>楼内配有两部电梯，楼后的小门平时开放到6：00，周末不开放小门。<br>蕙星楼开放时间：6：00--21：30','hui_xing_lou',14)"><img src="images/icon/hui_xing_lou.png" width="150"  /></div>
 	  <div class="cssICON_dong_pei_lou" onclick="LocID='dong_pei_lou';imgNum=4;showWind('东配楼','7层阶梯教室楼，每层3间大型阶梯教室，每间教室可容纳200人。','dong_pei_lou',4)"><img src="images/icon/dong_pei_lou.png" width="33.5"  /></div>
-	  <div class="cssICON_tao_li_yuan" onclick="LocID='tao_li_yuan_shi_tang';imgNum=4;showWind('桃李园食堂','崇山校区最大的食堂，共有三层。','tao_li_yuan_shi_tang',2)"><img src="images/icon/tao_li_yuan_shi_tang.png" width="64"  /></div>
+	  <div class="cssICON_tao_li_yuan" onclick="LocID='tao_li_yuan_shi_tang';imgNum=4;showWind('桃李园食堂','崇山校区最大的食堂，共有三层。<br>一楼二楼分别是1食堂和2食堂，三楼为特色食堂。食堂楼下有书生食铺，丽源超市和贡茶，食堂正门两侧分别是文具店和化妆品店。','tao_li_yuan_shi_tang',2)"><img src="images/icon/tao_li_yuan_shi_tang.png" width="64"  /></div>
 	  <div class="cssICON_2_she" onclick="LocID='2_she';imgNum=1;showWind('学生宿舍二舍','学生宿舍二舍为女寝，宿舍楼于2000年竣工，共七层，宿舍配备有阳台。','2_she',1)"><img src="images/icon/2_she.png" width="55"  /></div>
 	  <div class="cssICON_bgcs" onclick="LocID='bgcs';imgNum=4;showWind('百果超市商业楼','百果超市位于崇山校区北部，为崇山校区商户区。共有三层楼：<br>一楼为百果超市，超市内部有手机维修和数码产品出售，配钥匙，移动营业厅，摄影，眼镜店。一楼东侧外面有美妆店，沪上阿姨，四季鲜果，打印复印店。<br>二楼为太平洋咖啡，艺凡发艺和男浴池 <br>三楼为校园卡中心和女浴池，校园卡挂失与解冻到校园卡中心办理。 <br>百果超市开业时间为7:40--21:20','bgcs',3)"><img src="images/icon/bgcs.png" width="62"  /></div>
 		
@@ -1359,7 +1379,7 @@ console.log(stri+' ID:'+loctId);
 	  <div class="cssICON_xi_jie_ti" onclick="LocID='xi_jie_ti';imgNum=3;showWind('西阶梯教学楼','西阶梯教学楼位于哲理楼西北方向，银杏路旁，为3层阶梯教室楼，每层有两间不同规格的阶梯教室，没课时可用于自习。东阶梯和西阶梯教学楼外观相似，分别位于哲理楼后侧的两端。','xi_jie_ti',3)"><img src="images/icon/xi_jie_ti.png" width="42"  /></div>	
 	  <div class="cssICON_huai_yuan_lou" onclick="LocID='huai_yuan_lou';imgNum=6;showWind('怀远楼','怀远楼正对着崇山校区东南门，1953年投入使用，为苏联风格建筑，立面风格类似于俄罗斯冬宫，原为沈阳俄文专科学校教学楼，现在为辽宁大学轻型产业学院，药学院和环境学院科研实验楼。','huai_yuan_lou',6)"><img src="images/icon/huai_yuan_lou.png" width="142.5"  /></div>	
 	  <div class="cssICON_ji_guan_lou" onclick="LocID='ji_guan_lou';imgNum=5;showWind('机关楼','机关楼建于1956年，正对着崇山校区正门，原为辽宁大学图书馆，现作为辽宁大学崇山校区校部办公楼，辽大党校所在地。','ji_guan_lou',5)"><img src="images/icon/ji_guan_lou.png" width="151"  /></div>		
-	  <div class="cssICON_ji_jiao" onclick="LocID='ji_jiao';imgNum=3;showWind('继续教育学院','辽宁大学继续教育学院楼。','ji_jiao',3)"><img src="images/icon/ji_jiao.png" width="24.5"  /></div>	
+	  <div class="cssICON_ji_jiao" onclick="LocID='ji_jiao';imgNum=3;showWind('人文科技学院','辽宁大学人文科技学院楼。','ji_jiao',3)"><img src="images/icon/ji_jiao.png" width="19"  /></div>	
 	  <div class="cssICON_kuai_di_zhong_xin" onclick="LocID='kuai_di_zhong_xin';imgNum=2;showWind('快递中心','崇山校区的快递中心，所有的快递都在这里取，这里也可以邮寄快递。','kuai_di_zhong_xin',2)"><img src="images/icon/kuai_di_zhong_xin.png" width="134"  /></div>	
 	  <div class="cssICON_lan_qiu_chang" onclick="LocID='lan_qiu_chang';imgNum=4;showWind('篮球场','崇山校区大篮球场，位于蕙星楼后侧，为2022年新修建的标准篮球场，共有8个标准场地，崇山校区的各大篮球比赛在此举行。','lan_qiu_chang',4)"><img src="images/icon/lan_qiu_chang.png" width="69"  /></div>	
 	  <div class="cssICON_li_xian_lou" onclick="LocID='li_xian_lou';imgNum=4;showWind('理贤楼','理贤楼位于崇山校区东部，共9层，为物理学院的科研办公楼，配备有各类物理实验室。理工科的大物实验在此楼进行。','li_xian_lou',4)"><img src="images/icon/li_xian_lou.png" width="97"  /></div>	
@@ -1388,7 +1408,7 @@ console.log(stri+' ID:'+loctId);
 	  <div class="cssICON_3_she" onclick="LocID='3_she';imgNum=2;showWind('学生宿舍三舍','三舍学生宿舍位于辽宁大学崇山校区西北部，小篮球场旁边，与十舍相邻。研究生男寝，没有阳台，无独立卫浴。','3_she',2)"><img src="images/icon/3_she.png" width="88.5"  /></div>	
 	  <div class="cssICON_4_she" onclick="LocID='4_she';imgNum=2;showWind('学生宿舍四舍','四舍位于桃李园食堂南部，为研究生男寝，没有阳台，无独立卫浴。','4_she',2)"><img src="images/icon/4_she.png" width="64.5"  /></div>		
 	  <div class="cssICON_5_she" onclick="LocID='5_she';imgNum=2;showWind('学生宿舍五舍','五舍为留学生宿舍','5_she',2)"><img src="images/icon/5_she.png" width="65"  /></div>		
-	  <div class="cssICON_16_she" onclick="LocID='16_she';imgNum=1;showWind('学生宿舍16舍','十六舍位于继续教育学院，为继教学院楼的一部分。','16_she',1)"><img src="images/icon/16_she.png" width="35.5"  /></div>	
+	  <div class="cssICON_16_she" onclick="LocID='16_she';imgNum=1;showWind('学生宿舍16舍','十六舍位于人文科技学院旁边，为人文科技学院楼的一部分。','16_she',1)"><img src="images/icon/16_she.png" width="35.5"  /></div>	
 		
 		
 	  <div class="cssICON_xiao_lan_qiu_chang" onclick="LocID='xiao_lan_qiu_chang';imgNum=2;showWind('小篮球场','位于宿舍附近的小型篮球场，往返宿舍楼很方便，共配备有10个篮球架。体育课篮球课通常在这个篮球场上课。','xiao_lan_qiu_chang',2)"><img src="images/icon/xiao_lan_qiu_chang.png" width="61.2"  /></div>	
@@ -1402,7 +1422,7 @@ console.log(stri+' ID:'+loctId);
 	  <div class="cssICON_da_xue_sheng_huo_dong_zhong_xin" onclick="LocID='da_xue_sheng_huo_dong_zhong_xin';imgNum=1;showWind('大学生活动中心','大学生活动中心位于三食堂楼上，内部有舞台，用于举办歌手大赛等活动或进行排练。','da_xue_sheng_huo_dong_zhong_xin',1)"><img src="images/icon/da_xue_sheng_huo_dong_zhong_xin.png" width="67"  /></div>	
 	  <div class="cssICON_san_shi_tang" onclick="LocID='san_shi_tang';imgNum=2;showWind('三食堂','三食堂位于九舍对面，为学生食堂，部分档口在非三餐时间段关闭。','san_shi_tang',2)"><img src="images/icon/san_shi_tang.png" width="29.5"  /></div>	
 	  <div class="cssICON_si_shi_tang" onclick="LocID='si_shi_tang';imgNum=2;showWind('四食堂','四食堂位于三食堂与清真食堂旁边。为学生食堂，部分档口在非三餐时间段关闭。','si_shi_tang',2)"><img src="images/icon/si_shi_tang.png" width="29.5"  /></div>	
-	  <div class="cssICON_qing_zhen_shi_tang" onclick="LocID='qing_zhen_shi_tang';imgNum=1;showWind('清真食堂','清真食堂位于四食堂东侧，非三餐时段不开放。','qing_zhen_shi_tang',1)"><img src="images/icon/qing_zhen_shi_tang.png" width="43"  /></div>	
+	  <div class="cssICON_qing_zhen_shi_tang" onclick="LocID='qing_zhen_shi_tang';imgNum=1;showWind('清真食堂','清真食堂（回民食堂）位于四食堂东侧，非三餐时段不开放。','qing_zhen_shi_tang',1)"><img src="images/icon/qing_zhen_shi_tang.png" width="43"  /></div>	
 	  <div class="cssICON_xue_fu_jiu_hao" onclick="LocID='xue_fu_jiu_hao';imgNum=1;showWind('学府九号国际教育中心','学府九号国际教育中心，提供留学相关服务，内部有自习室和咖啡厅。','xue_fu_jiu_hao',1)"><img src="images/icon/xue_fu_jiu_hao.png" width="21"  /></div>	
 	  <div class="cssICON_fa_shuo_gong_yv" onclick="LocID='fa_shuo_gong_yv';imgNum=1;showWind('法硕公寓','法硕研究生公寓','fa_shuo_gong_yv',1)"><img src="images/icon/fa_shuo_gong_yv.png" width="88"  /></div>	
 	  <div class="cssICON_ma_yuan_lou" onclick="LocID='ma_yuan_lou';imgNum=3;showWind('马克思主义学院','红色的苏式三层小楼，为沈阳市历史建筑。辽大马院为国家重点马克思主义学院。','ma_yuan_lou',3)"><img src="images/icon/ma_yuan_lou.png" width="50"  /></div>
@@ -1410,12 +1430,12 @@ console.log(stri+' ID:'+loctId);
 		
 		
 		
-	  <div class="cssICON_hou_qin" onclick="LocID='hou_qin';imgNum=1;showWind('后勤发展集团','红色的三层楼，为后勤集团的办公楼。','hou_qin',1)"><img src="images/icon/hou_qin.png" width="46"  /></div>
+	  <div class="cssICON_hou_qin" onclick="LocID='hou_qin';imgNum=1;showWind('后勤发展集团','红色的三层楼，为后勤发展集团的办公楼。','hou_qin',1)"><img src="images/icon/hou_qin.png" width="46"  /></div>
 	  <div class="cssICON_li_an_min_yan_jiu_yuan" onclick="LocID='li_an_min_yan_jiu_yuan';imgNum=2;showWind('李安民经济研究院','成立于2017年的经济研究院，原址为五洲园宾馆。','li_an_min_yan_jiu_yuan',2)"><img src="images/icon/li_an_min_yan_jiu_yuan.png" width="21.5"  /></div>
 	  <div class="cssICON_yan_jiu_sheng_yuan" onclick="LocID='yan_jiu_sheng_yuan';imgNum=3;showWind('博远楼','博远楼，研究生院的院楼。','yan_jiu_sheng_yuan',3)"><img src="images/icon/yan_jiu_sheng_yuan.png" width="76.4"  /></div>
-	  <div class="cssICON_guo_ji_jiao_yv_zhong_xin" onclick="LocID='guo_ji_jiao_yv_zhong_xin';imgNum=3;showWind('国际教育学院','国际教育学院的院楼，有留学生在此学习。','guo_ji_jiao_yv_zhong_xin',3)"><img src="images/icon/guo_ji_jiao_yv_zhong_xin.png" width="92.5"  /></div>
-	  <div class="cssICON_cao_chang" onclick="LocID='cao_chang';imgNum=3;showWind('操场','操场位于崇山校区中部，为主要的体育运动场地，操场跑道400米，中间为足球场。操场位于蕙星楼附近的小门不开放。','cao_chang',3)"><img src="images/icon/cao_chang.png" width="248"  /></div>
-	  <div class="cssICON_ti_yv_guan" onclick="LocID='ti_yv_guan';imgNum=2;showWind('体育馆','崇体育馆位于银杏路西侧，2018年翻修，内部有乒乓球场地，进入体育馆需要换鞋或鞋套。','ti_yv_guan',2)"><img src="images/icon/ti_yv_guan.png" width="54.5"  /></div>
+	  <div class="cssICON_guo_ji_jiao_yv_zhong_xin" onclick="LocID='guo_ji_jiao_yv_zhong_xin';imgNum=3;showWind('国际教育学院','汉语国际教育学院的院楼，有留学生在此学习。','guo_ji_jiao_yv_zhong_xin',3)"><img src="images/icon/guo_ji_jiao_yv_zhong_xin.png" width="92.5"  /></div>
+	  <div class="cssICON_cao_chang" onclick="LocID='cao_chang';imgNum=3;showWind('操场','操场位于崇山校区中部，为主要的体育运动场地，操场跑道400米，中间为足球场。傍晚操场上有时会举办演唱会，舞蹈等活动。操场位于蕙星楼附近的小门不开放。','cao_chang',3)"><img src="images/icon/cao_chang.png" width="248"  /></div>
+	  <div class="cssICON_ti_yv_guan" onclick="LocID='ti_yv_guan';imgNum=2;showWind('体育馆','崇山校区体育馆位于银杏路西侧，2018年翻修，内部有乒乓球场地，进入体育馆需要换鞋或鞋套。','ti_yv_guan',2)"><img src="images/icon/ti_yv_guan.png" width="54.5"  /></div>
 	  <div class="cssICON_han_lin_yuan" onclick="LocID='han_lin_yuan';imgNum=2;showWind('翰林园公寓','翰林园，图书馆斜对面的橙色两层小楼，内部房间面积较大。','han_lin_yuan',2)"><img src="images/icon/han_lin_yuan.png" width="29.5"  /></div>
 	  <div class="cssICON_15_she" onclick="LocID='15_she';imgNum=2;showWind('15舍培训公寓','十五舍培训公寓位于图书馆对面，为三层楼房。','15_she',2)"><img src="images/icon/15_she.png" width="36"  /></div>
 	  <div class="cssICON_zheng_men" onclick="LocID='zheng_men';imgNum=3;showWind('正门','正门位于机关楼面前，与百鸟公园相隔一条马路，为白色墙面的校门，两边为半圆柱形状的门卫室，出门右手边为百鸟公园地铁站A口。','zheng_men',3)"><img src="images/icon/zheng_men.png" width="55.3"  /></div>
