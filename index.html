@@ -245,12 +245,57 @@ position:absolute;top:10px;left:0px;width:935px;font-size: 20px;
 {position:absolute;top:598px;left:15px;}
 .videoDiv4
 {position:absolute;top:58px;left:15px;}
+.videoDiv5
+{position:absolute;top:328px;left:15px;}
 		.mods
 		{
 			position: absolute;
 			top:1680px;
 left:25px;
+		}.mcImages
+		{
+			position: absolute;
+			top:2300px;
+left:25px;
 		}
+#mcImg {
+height:90px;
+}
+#mcImg ul{
+list-style:none;
+}
+#mcImg li{
+display:inline;
+}
+#mcImg a{
+text-decoration:none;
+}
+.Img{
+width:300px
+margin-top:10px;
+margin-left:30px;
+display:inline;
+}
+.Imgtxt{
+width:300px;
+height:30px;
+margin-top:15px;
+margin-left:30px;
+display:block;
+}
+#mcImgt {
+height:90px;
+}
+#mcImgt ul{
+list-style:none;
+}
+#mcImgt li{
+display:inline;
+}
+#mcImgt a{
+text-decoration:none;
+}
+
 		
 		
 	</style>
@@ -419,10 +464,10 @@ function showMinecraft()
 <br>2023年2月末，B站投稿视频首次破万</div>
 
 <div class="videos">
-<div style="background:#f3f3f3;width:1500px;height:26px">
-<div style="background:#8dbcf4;width:10px;height:26px;">&nbsp;
+<div style="background:#f3f3f3;width:1500px;height:32px">
+<div style="background:#8dbcf4;width:12px;height:32px;">&nbsp;
 </div>
-<div style="position:absolute;top:2px;left:16px">&nbsp;手&nbsp;作&nbsp;产&nbsp;出&nbsp;</div></div><br>
+<div style="position:absolute;top:2px;left:16px;font-size:20px;">&nbsp;手&nbsp;作&nbsp;产&nbsp;出&nbsp;</div></div><br>
 
 <div class="videoDiv">
 <iframe src="//player.bilibili.com/player.html?aid=391854560&bvid=BV1dd4y1a7F3&cid=938376112&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="width:400px;height:230px"> </iframe>
@@ -447,13 +492,14 @@ function showMinecraft()
 
 
 <div class="mods">
-<div style="background:#f3f3f3;width:1500px;height:26px">
-<div style="background:#8dbcf4;width:10px;height:26px;">&nbsp;
+<div style="background:#f3f3f3;width:1500px;height:32px">
+<div style="background:#8dbcf4;width:12px;height:32px;">&nbsp;
 </div>
-<div style="position:absolute;top:2px;left:16px">&nbsp;Minecraft&nbsp;模&nbsp;组&nbsp;</div></div>
+<div style="position:absolute;top:2px;left:16px;font-size:20px;">&nbsp;Minecraft&nbsp;模&nbsp;组&nbsp;</div></div>
 <div class="videoDiv4">
 <div class="videoText2">
 【建筑楼层批量复制】<br>建筑楼层批量复制模组（Bulk copy of building floor），为创造模式制作的建筑辅助模组，确定单层楼层的端点坐标后一次性向上复制多层楼层，可以避免楼层复制指令的重复使用。<br>加入了区域复制功能，用目标坐标查看器保存区域两端坐标以及目的地坐标就可以一键复制。<br>
+开发环境：Java18；Intellij IDEA 社区版<br>
     运作方式：Forge<br>
     游戏版本：Java版  1.16.5<br>
     
@@ -462,7 +508,40 @@ function showMinecraft()
 </div>
 <iframe src="//player.bilibili.com/player.html?aid=906301810&bvid=BV1PM4y1X7Yc&cid=991979038&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position:absolute;left:1015px;width:400px;height:230px"> </iframe>
 </div>
+
+<div class="videoDiv5">
+<div class="videoText2">
+【现代生存模组】<br>模组内容取材于日常生活，加入了一些生活中常见的食物与道具。加入了更强的武器，可以更高效地击杀敌人。
+增加回血药品，可以快速回复生命值。内含抽卡机制，有机会获得稀有道具。
+加入了两张经典红歌唱片。<br>
+开发环境：Java18；Intellij IDEA 社区版<br>
+    运作方式：Forge<br>
+    游戏版本：Java版  1.16.5<br>
+    
+    <a href="https://github.com/djyy2021/MinecfaftMod/raw/main/%E5%AF%B9%E6%B1%9F%E7%9A%84%E7%8E%B0%E4%BB%A3%E7%94%9F%E5%AD%98%E7%AC%AC%E4%B8%80%E7%89%88.jar" target="_blank">Mod下载链接</a>
+    <a href="https://www.mcmod.cn/class/9314.html">MCMod百科</a>
 </div>
+<img src="images/mcImage/11.png" width="400px" style="position:absolute;left:1015px;" onclick="location='https://www.mcmod.cn/class/9314.html'">
+</div>
+</div>
+
+
+<div class="mcImages">
+<div style="background:#f3f3f3;width:1500px;height:32px">
+<div style="background:#8dbcf4;width:12px;height:32px;">&nbsp;
+</div>
+<div style="position:absolute;top:2px;left:16px;font-size:20px;">&nbsp;MC&nbsp;建&nbsp;筑&nbsp;制&nbsp;作</div></div>
+<div><ul id="mcImg">
+<li><div class="Img"><img src="images/mcImage/0.png" width="240px"></div></li>
+<li><div class="Img"><img src="images/mcImage/1.png" width="240px"></div></li>
+<li><div class="Img"><img src="images/mcImage/2.png" width="240px"></div></li>
+<li><div class="Img"><img src="images/mcImage/3.png" width="240px"></div></li>
+<li><div class="Img"><img src="images/mcImage/4.png" width="240px"></div></li>
+</ul>
+</div>
+
+
+
 
 
 <div class="copyright"><hr style="position: absolute;left:-490px;width:1500px"><br><br>
