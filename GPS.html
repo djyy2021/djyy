@@ -5,6 +5,15 @@
 background:#f3f3f3;
 width:1200px;
 height:700px;
+}.CSSPin
+{
+width:10px;
+height:10px;
+background:#FF0000;
+visiable:visual;
+position:absolute;
+left:61px;
+top:1px;
 }
 </style>
 </head>
@@ -12,6 +21,15 @@ height:700px;
 <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=UBAhnYbt6oGpDPZSMReoUgKKdpDdBKad"></script>
  <script type="text/javascript" src="http://developer.baidu.com/map/jsdemo/demo/convertor.js"></script>
 <script>
+function locPin(Plef,Ptop){
+var pi=document.getElementById("pin");
+pi.style.visible="visual";
+pi.style.left=(Plef)+"px";
+//pi.top=(Ptop-5)+"px";
+pi.style.top=(Ptop-5)+"px";
+console.log("定位到：("+Plef+","+Ptop+")");}
+
+
 function BDpos(){
 var Bjd=-1;
 var Bwd=-1
@@ -22,68 +40,55 @@ geolocation.getCurrentPosition(function (r)
 {
 if(this.getStatus()==0)
 {
-Bjd=r['latitude'];
-Bwd=r['longitude'];
+Bwd=r['latitude'];
+Bjd=r['longitude'];
+var pylStr="距离西北角的偏移量(top,left)：";
+
+//Bwd=41.837472
+//Bjd=123.418586;
+
+var lef=0;
+var topp=0;
+var abc=687.8048/4454;
+var de=1200/11714;
+
+topp=(41841926-Bwd*10000*100)*abc;
+lef=(Bjd*10000*100-123406872)*de;
+pylStr=pylStr+topp+","+lef;
+console.log(Bwd);
+console.log((Bwd*10000*100)+",41837472");
+console.log("纬度差值"+(Bwd*10000*100-41837472));
+console.log("Lef,Topp:"+lef+topp);
+
+locPin(lef,topp);
+
+
+
+
+
+
 var stri=Bjd+','+Bwd;
 var sh=document.getElementById('jwd');
-sh.innerHTML=stri;
+sh.innerHTML=stri+"<br>"+pylStr;
 console.log(stri);
 console.log(r);
 }
 }
 )
+
+
+
 }
 </script>
 
 
 <script>
-//西北41.836082,123.399581  东南41.831833,123.411901
-var x;
-var jd="-";
-var wd="-";
-function getLoc()
-{x=document.getElementById('jwd');
-if(navigator.geolocation)
-{
-navigator.geolocation.getCurrentPosition(showPosition,showError);
-}
-else
-{
-x.innerHTML="浏览器不支持定位";
-}
-function showPosition(position)
-{
-wd=wd+position.coords.latitude;
-jd=jd+position.coords.longitude;
-x.innerHTML=wd+','+jd;
-}
-function showError(error)
-{
-switch(error.code)
-{
-case error.PERMISSION_DENIED:
-{x.innerHTML="用户不允许定位" ;
-break;}
-case error.POSITION_UNAVAILABLE:
-{x.innerHTML="无法获取当前位置"; 
-break;}
-case error.TIMEOUT:
-{x.innerHTML="获取地理位置超时" ;
-break;}
-case error.UNKNOWN_ERROR:
-{x.innerHTML="未知错误" ;
-break;}
-}
-}
-
-
-
-
-}
+//西北123.406872,41.841926  东南123.418586,41.837472
 </script>
-<div class="back">
+
+<div class="back"><div id='pin' class="CSSPin"></div><img src="LNUmap/mapBack.png" width="1200px"><br><hr>
 GPS定位测试
-</div>
+</div><br><br>
 <div>经纬度：<button onclick="BDpos()">点击</button>
 <div id="jwd">0,0
 </div>
