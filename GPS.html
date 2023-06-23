@@ -1,0 +1,65 @@
+<head>
+<style>
+.back
+{
+background:#f3f3f3;
+width:1200px;
+height:700px;
+}
+</style>
+</head>
+<body>
+<script>
+var x;
+var jd=-1;
+var wd=-1;
+function getLoc()
+{x=document.getElementById('jwd');
+if(navigator.geolocation)
+{
+navigator.geolocation.getCurrentPosition(showPosition,showError);
+}
+else
+{
+x.innerHTML="浏览器不支持定位";
+}
+function showPosition(position)
+{
+wd=position.coords.latitude;
+jd=position.coords.longitude;
+x.innerHTML=wd+','+jd;
+}
+function showError(error)
+{
+switch(error.code)
+{
+case error.PERMISSION_DENIED:
+{x.innerHTML="用户不允许定位" ;
+break;}
+case error.POSITION_UNAVAILABLE:
+{x.innerHTML="无法获取当前位置"; 
+break;}
+case error.TIMEOUT:
+{x.innerHTML="获取地理位置超时" ;
+break;}
+case error.UNKNOWN_ERROR:
+{x.innerHTML="未知错误" ;
+break;}
+}
+}
+
+
+
+
+}
+</script>
+<div class="back">
+GPS定位测试
+</div>
+<div>经纬度：<button onclick="getLoc()">点击</button>
+<div id="jwd">0,0
+</div>
+</div>
+</body>
+
+
