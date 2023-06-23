@@ -37,8 +37,8 @@ function BDpos()
 {
 var Bjd=-1;
 var Bwd=-1;
-//let BMap=BMap;
-geolocation=new window.BMap.Geolocation();
+//let BMap=window.BMap;
+geolocation=new BMap.Geolocation();
 //geolocation.enableSDKLocation();
 let asd=Math.random();
 geolocation.getCurrentPosition(function (r)
