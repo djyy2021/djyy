@@ -37,16 +37,16 @@ function BDpos()
 {
 var Bjd=-1;
 var Bwd=-1;
-//let BMap=window.BMap;
-geolocation=new BMap.Geolocation();
-geolocation.enableSDKLocation();
+//let BMap=BMap;
+geolocation=new window.BMap.Geolocation();
+//geolocation.enableSDKLocation();
 let asd=Math.random();
 geolocation.getCurrentPosition(function (r)
 {
 if(this.getStatus()==0)
 {
-Bwd=r['latitude'];
-Bjd=r['longitude'];
+Bwd=r['point']['lat'];
+Bjd=r['point']['lng'];
 var pylStr="距离西北角的偏移量(top,left)：";
 
 //Bwd=41.837472
@@ -89,7 +89,8 @@ console.log(r);
 	
 function showGPS()
 {
-	let autoPlay=setInterval(BDpos,1000);
+	//let autoPlay=setInterval(BDpos,1000);
+BDpos();
 }
 	
 </script>
