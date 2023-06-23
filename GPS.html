@@ -30,14 +30,14 @@ pi.style.top=(Ptop-5)+"px";
 pi.style.visible="visual";
 console.log("定位到：("+Plef+","+Ptop+")");
 }
-
+var geolocation;
 
 function BDpos()
 {
 var Bjd=-1;
 var Bwd=-1;
-let BMap=window.BMap;
-let geolocation=new BMap.Geolocation();
+//let BMap=window.BMap;
+geolocation=new BMap.Geolocation();
 geolocation.enableSDKLocation();
 let asd=Math.random();
 geolocation.getCurrentPosition(function (r)
