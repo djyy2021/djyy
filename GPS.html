@@ -37,8 +37,8 @@ function BDpos()
 {
 var Bjd=-1;
 var Bwd=-1;
-//let BMap=window.BMap;
-geolocation=new BMap.Geolocation();
+//let BMap=BMap;
+geolocation=new window.BMap.Geolocation();
 //geolocation.enableSDKLocation();
 let asd=Math.random();
 geolocation.getCurrentPosition(function (r)
@@ -78,8 +78,6 @@ sh.innerHTML=stri+"<br>"+pylStr+"<br>"+asd;
 console.log(stri);
 console.log(r);
 }
-	else
-		{document.getElementById('jwd').innerHTML("无法获取坐标")}
 }
 )
 
