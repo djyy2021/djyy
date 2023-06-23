@@ -21,21 +21,25 @@ top:1px;
 <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=UBAhnYbt6oGpDPZSMReoUgKKdpDdBKad"></script>
  <script type="text/javascript" src="http://developer.baidu.com/map/jsdemo/demo/convertor.js"></script>
 <script>
-function locPin(Plef,Ptop){
+	
+function locPin(Plef,Ptop)
+{
 var pi=document.getElementById("pin");
-pi.style.visible="visual";
 pi.style.left=(Plef)+"px";
-//pi.top=(Ptop-5)+"px";
 pi.style.top=(Ptop-5)+"px";
-console.log("定位到：("+Plef+","+Ptop+")");}
+pi.style.visible="visual";
+console.log("定位到：("+Plef+","+Ptop+")");
+}
 
 
-function BDpos(){
+function BDpos()
+{
 var Bjd=-1;
-var Bwd=-1
+var Bwd=-1;
 let BMap=window.BMap;
-let geolocation=new BMap.Geolocation()
+let geolocation=new BMap.Geolocation();
 geolocation.enableSDKLocation();
+let asd=Math.random();
 geolocation.getCurrentPosition(function (r)
 {
 if(this.getStatus()==0)
@@ -69,7 +73,7 @@ locPin(lef,topp);
 
 var stri=Bjd+','+Bwd;
 var sh=document.getElementById('jwd');
-sh.innerHTML=stri+"<br>"+pylStr;
+sh.innerHTML=stri+"<br>"+pylStr+"<br>"+asd;
 console.log(stri);
 console.log(r);
 }
@@ -79,6 +83,14 @@ console.log(r);
 
 
 }
+	
+	
+	
+function showGPS()
+{
+	let autoPlay=setInterval(BDpos,1000);
+}
+	
 </script>
 
 
@@ -86,10 +98,10 @@ console.log(r);
 //西北123.406872,41.841926  东南123.418586,41.837472
 </script>
 
-<div class="back"><div id='pin' class="CSSPin"></div><img src="LNUmap/mapBack.png" width="1200px"><br><hr>
+<div class="back"><div id="pin" class="CSSPin"></div><img src="LNUmap/mapBack.png" width="1200px"><br><hr>
 GPS定位测试
 </div><br><br>
-<div>经纬度：<button onclick="BDpos()">点击</button>
+<div>经纬度：<button onclick="showGPS()">点击</button>
 <div id="jwd">0,0
 </div>
 </div>
