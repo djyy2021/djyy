@@ -388,6 +388,28 @@ text-decoration:none;
 			
 		}
 
+function doFss()
+{
+var post_http=new XMLHttpRequest();
+var obj={"uid":"346273252","akey":"BHUNJIMKO"};
+post_http.open("POST","http://8.141.83.100:8667/fss");
+post_http.setRequestHeader("Content-Type","application/json");
+post_http.send(JSON.stringify(obj));
+post_http.onreadystatechange=function()
+{
+	if(post_http.readyState==4&&post_http.status==200)
+	{
+		var res=JSON.parse(post_http.responseText);
+		console.log(res.fss);
+		console.log(res.chan);
+		var divFss=document.getElementById('fss');
+		divFss.innerHTML="B站粉丝数："+res.fss+"&nbsp;&nbsp;&nbsp;&nbsp;           "+res.chan;
+	}
+}
+
+
+
+}
 
     </script>
 </head>
@@ -490,6 +512,7 @@ function showMinecraft()
 
     <div class="order4" onclick="window.open('http://djyy24.top/404.html',_self)">
         <div style="font-family: 宋体;position:absolute; top:15px; width:75px;left:10px;">手作产出</div>
+
     </div>
     <div class="MC" id="minec" style="font-size:27px;" onclick="showMinecraft(++ab)">Minecraft</div>
 </div>
@@ -516,7 +539,8 @@ function showMinecraft()
 </div>
 <div class="readme">
     <br><br>
-    <div style="font-size: 30px">About</div>
+    <div style="font-size: 30px" onclick="doFss()">About <div  id="fss" style="position:absolute;font-size:16px;top:57px;left:200px;">&nbsp;&nbsp;&nbsp;&nbsp;
+</div></div>
     <hr>
     【关于手作】
     <br>2006年10月入坑手作，以纸艺为主
