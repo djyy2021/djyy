@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>对江邀月MC建筑</title>
+    <title>对江邀月-资源站</title>
 
     <script>
 var _hmt = _hmt || [];
@@ -29,7 +29,7 @@ var _hmt = _hmt || [];
 		.copyright
 		{position: absolute;
 			left:500px;
-			top:4360px;
+			top:4560px;
 			font-family: "宋体";
 		}
 		.pageTitle{
@@ -262,20 +262,19 @@ position:absolute;top:10px;left:0px;width:935px;font-size: 20px;
 {position:absolute;top:868px;left:15px;}
 .videoDiv11
 {position:absolute;top:868px;left:15px;}
+.videoDiv13
+{position:absolute;top:1148px;left:15px;}
+.videoDiv14
+{position:absolute;top:1428px;left:15px;}
 		.mods
 		{
 			position: absolute;
 			top:2000px;
 left:25px;
-		}.mcImages
-		{
-			position: absolute;
-			top:3180px;
-left:25px;
 		}.mapImages
 		{
 			position: absolute;
-			top:3710px;
+			top:3740px;
 left:25px;
 		}.hldImages
 		{
@@ -382,6 +381,36 @@ text-decoration:none;
 			}
 			oRight.addEventListener("click",handleRightBtn);
 			
+            
+			function handleRightBtn()
+			{
+				oImgList.style.transition = "0.5s ease";
+				console.log("abcdefg");
+				console.log(index);
+				if(!lock)
+					return;
+				
+				if(index<=5)
+				{oImgList.style.right=index*(640)+"px";
+					index++;
+				oImgList.style.transtion="0.5s ease";}
+				if(index==6)
+				{console.log("返回");
+					index=1;
+					
+					setTimeout(() => {
+                    oImgList.style.right = 0;
+                    oImgList.style.transition = "none";
+                }, 500);oImgList.style.transition = "0.5s ease";
+				}
+				//setCircles();
+				setTimeout(()=>{
+				lock=true;
+				},500);
+				
+			}
+			oLeft.addEventListener("click",handleRightBtn);
+			
 			
 			
 			
@@ -460,10 +489,8 @@ function showMinecraft()
 
 
 <div class="menu">
-    <div class="pageTitle">对江邀月MC建筑</div>
-    <div class="order0" onclick="window.open('http://djyy24.top',_self)">
-        <div style="font-family: 宋体;position:absolute; top:15px; width:75px;left:10px;">主&nbsp;&nbsp;页</div>
-    </div>
+    <div class="pageTitle">对江邀月-资源站</div>
+
 
 
     <div class="order1">
@@ -508,16 +535,13 @@ function showMinecraft()
     <div class="order3">
         <div style="font-family: 宋体;position:absolute; top:15px; width:75px;left:10px;"> Web应用</div>
         <div class="downText">
-            <a href="https://djyy24.top/chat.html">
-                <div class="downFont">AI机器人</div>
-            </a>
             <a href="https://djyy24.top/daohang.html">
                 <div class="downFont">网址导航</div>
             </a>
             <a href="https://djyy24.top/%E5%8F%AF%E8%A7%86%E5%8C%96%E5%A4%A7%E5%B1%8F.html">
                 <div class="downFont">数据大屏</div>
             </a>
-            <a href="https://djyy24.top/LNUmap/WEBmap.html">
+            <a href="https://djyy2021.github.io/djyy/LNUmap/WEBmap.html">
                 <div class="downFont">崇山地图</div>
             </a>
             <a href="http://8.141.83.100:88/">
@@ -526,11 +550,14 @@ function showMinecraft()
             <a href="http://8.141.83.100:100/">
                 <div class="downFont">图书馆系统</div>
             </a>
+            <a href="http://43.143.194.146:93/">
+                <div class="downFont">皮 肤 站</div>
+            </a>
         </div>
     </div>
 
-    <div class="order4" onclick="window.open('http://djyy24.top/404.html',_self)">
-        <div style="font-family: 宋体;position:absolute; top:15px; width:75px;left:10px;">手作产出</div>
+    <div class="order4" onclick="window.open('http://main.djyy24.top',_self)">
+        <div style="font-family: 宋体;position:absolute; top:15px; width:75px;left:10px;">主   站</div>
 
     </div>
     <div class="MC" id="minec" style="font-size:27px;" onclick="showMinecraft(++ab)">Minecraft</div>
@@ -549,6 +576,7 @@ function showMinecraft()
 
 
     </div>
+
     <div>
         <button type="button" class="left">←</button>
         <button type="button" class="right">→</button>
@@ -693,53 +721,40 @@ function showMinecraft()
         </div>
         <img src="images/software/4.png" width="400px" style="position:absolute;left:1015px;">
     </div>
-</div>
 
+    
 
-<div class="mcImages">
-    <div style="background:#f3f3f3;width:1500px;height:32px">
-        <div style="background:#8dbcf4;width:12px;height:32px;">&nbsp;
+    <div class="videoDiv13">
+        <div class="videoText2">
+            <span style="color:Dodgerblue"><strong>GPT智能对话村民模组</strong></span><br>
+            •基于讯飞星火认知大模型 2.0 的村民智能对话模组，在Minecraft游戏中实现和村民的模拟对话。<br>
+            •在村民交易界面进入对话界面，与接入大语言模型的村民进行类似自然语言的对话。<br>
+            •可以向村民提问，提问结果由讯飞星火认知模型生成。模组支持上下文对话，不同职业的村民人设不同。<br>
+            实现技术：Java，Forge<br>
+            制作时间：2023年11月<br>
+            <a href="https://github.com/djyy24/Minecraft-/tree/main/GPT%E6%9D%91%E6%B0%911.0"
+               target="_blank">1.18.2模组下载链接 </a>
+               <a href="https://github.com/djyy24/Minecraft-/tree/main/GPT%E6%9D%91%E6%B0%91%E7%B1%BB%E5%BA%93"
+                  target="_blank"> 类库下载链接</a>
         </div>
-        <div style="position:absolute;top:2px;left:16px;font-size:20px;"> <i class="el-icon-office-building" style="color:＃87CEEB"></i> &nbsp;MC&nbsp;建&nbsp;筑&nbsp;制&nbsp;作</div>
+        <img src="images/software/8.jpg" width="400px" style="position:absolute;left:1015px;">
     </div>
-    <div>
-        <ul id="mcImg">
-            <li>
-                <div class="Img"><img src="images/mcImage/0.png" width="240px"></div>
-            </li>
-            <li>
-                <div class="Img"><img src="images/mcImage/1.png" width="240px"></div>
-            </li>
-            <li>
-                <div class="Img"><img src="images/mcImage/2.png" width="240px"></div>
-            </li>
-            <li>
-                <div class="Img"><img src="images/mcImage/3.png" width="240px"></div>
-            </li>
-            <li>
-                <div class="Img"><img src="images/mcImage/4.png" width="240px"></div>
-            </li>
-        </ul>
-        <br><br><br><br><br>
-        <div>
-            <ul id="mcImg">
-                <li>
-                    <div class="Img"><img src="images/mcImage/5.png" width="240px"></div>
-                </li>
-                <li>
-                    <div class="Img"><img src="images/mcImage/6.png" width="240px"></div>
-                </li>
-                <li>
-                    <div class="Img"><img src="images/mcImage/7.png" width="240px"></div>
-                </li>
-                <li>
-                    <div class="Img"><img src="images/mcImage/8.png" width="240px"></div>
-                </li>
-                <li>
-                    <div class="Img"><img src="images/mcImage/9.png" width="240px"></div>
-                </li>
-            </ul>
+
+    
+
+    <div class="videoDiv14">
+        <div class="videoText2">
+            <span style="color:Dodgerblue"><strong>Minecraft现代窗户模组</strong></span><br>
+            •现代窗户模组为装饰方块类 Mod，包括了百种左右的现代风格窗户。窗户设计取材自东北地区城市居民楼常<br>见
+            的塑钢窗 / 铝合金窗，尺寸长宽包括 1×1，1×2，2×2 等，多种窗户可进行组合。用于作为建筑的窗户，增<br>加真实感。
+            •模组使用 Blockbench 建模，主要用于建筑装饰，达到比较仿真的效果。<br>
+            •包含 100+ 种窗户，取材自现实，还原真实的塑钢窗以及铝合金窗。窗户可右键打开。<br>
+            实现技术：Java，Forge<br>
+            制作时间：2024年4月<br>
+            <a href="https://djyy24.top/LNUmap/WEBmap.html"
+               target="_blank">体验链接</a>
         </div>
+        <img src="images/software/9.png" width="400px" style="position:absolute;left:1015px;">
     </div>
 </div>
 
@@ -807,7 +822,7 @@ function showMinecraft()
 <div class="copyright">
     <hr style="position: absolute;left:-490px;width:1500px">
     <br><br>
-    Copyright©2023,2024 对江邀月24<br>&nbsp;&nbsp;&nbsp;&nbsp;2023.4.6制作|2024.4.23更新<br><br>
+    Copyright©2023,2024 对江邀月24/对江邀月城市创意<br>&nbsp;&nbsp;&nbsp;&nbsp;2023.4.6制作|2024.4.24更新<br><br>
 </div>
 
 </body>
